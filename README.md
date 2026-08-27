@@ -4,6 +4,9 @@ A tiny GitHub Pages site: a landing page (`index.html`) that links to a **Logs**
 page (`logs.html`), which is generated from the run logs written by
 `../run_daily.py`.
 
+- Repo: <https://github.com/smerakm/myownjarvis>
+- Live: <https://smerakm.github.io/myownjarvis/>
+
 ## How it works
 
 - `../logs/*.log` — the source. Monthly run logs produced by `../run_daily.py`
@@ -57,9 +60,11 @@ To rebuild automatically after every daily run, add this to `../run_daily.py`
 (or the cron wrapper) after the log is written:
 
 ```
-subprocess.run([sys.executable, "JarvisPages/scripts/build_logs.py"], cwd=BASE_DIR)
+subprocess.run([sys.executable, "myownjarvis/scripts/build_logs.py"], cwd=BASE_DIR)
 ```
 
 ## Enabling Pages
 
-Repo **Settings → Pages → Source = GitHub Actions**.
+Repo **Settings → Pages → Source = GitHub Actions**. The workflow runs on every
+push to `main`; use **Actions → Deploy Pages → Run workflow** for the first
+deploy or any manual redeploy.
