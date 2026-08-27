@@ -56,12 +56,11 @@ JARVIS_LOG_DIR=/path/to/logs python3 scripts/build_logs.py
 
 Then open `index.html` in a browser, commit `logs.html`, and push.
 
-To rebuild automatically after every daily run, add this to `../run_daily.py`
-(or the cron wrapper) after the log is written:
-
-```
-subprocess.run([sys.executable, "myownjarvis/scripts/build_logs.py"], cwd=BASE_DIR)
-```
+`../run_daily.py` already does this: after writing each run to the log it calls
+`publish_logs_page()`, which runs `scripts/build_logs.py` and then
+`git add logs.html && git commit && git push origin main` so GitHub Pages
+redeploys. The outcome is recorded in the log under `--- Publish logs page ---`
+(on the *next* run, since it happens after the current run is written).
 
 ## Enabling Pages
 
