@@ -63,7 +63,87 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-08-27 15:14 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-08-28 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-08-28 10:05:01</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 48 unread, 267 from the last 12 days (269 unique candidates). Fetching headers...
+  fetched 10/269
+    ... 25 more progress lines ...
+  fetched 269/269
+212 messages to render. Fetching full content...
+  fetched 10/212
+    ... 20 more progress lines ...
+  fetched 212/212
+Categorizing 212 messages...
+Labeling and marking as read 179 messages...
+  processed 10/179
+    ... 16 more progress lines ...
+  processed 179/179
+Applied labels to 179/179, marked 179/179 as read.
+Rendering HTML page...
+Wrote 212 categorized messages to output/index.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 14 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/14
+  fetched 14/14
+  [Thu, 13 Aug 2026 11:36:43 +0000] anonymous@example.com: marek.smerak, here&#x27;s what&#x27;s coming soon to Netflix
+  [Thu, 13 Aug 2026 17:00:26 +0200] anonymous@example.com: Ledarutbildning 23 augusti – vi behöver bättre uppslutning - Svara på kallelsen!
+  [Thu, 13 Aug 2026 13:18:54 +0000] anonymous@example.com: Vstupenky na derby, neomezený obsah a mnohem víc díky UNLIMITED
+  [Thu, 13 Aug 2026 17:37:55 +0000] anonymous@example.com: You have 10+ new invitations
+  [Thu, 13 Aug 2026 15:00:05 +0000] anonymous@example.com: EuroForce teammates have a Zip invite waiting for you. 📬
+  [Thu, 13 Aug 2026 17:02:13 +0100] anonymous@example.com: Salesforce + Slack: 312% ROI
+  [Thu, 13 Aug 2026 17:09:08 +0000] anonymous@example.com: Kallelse Team 13 U14: Träningsmatch - MB - INTRESSEANMÄLAN 2026-09-05 11:00 för Matej Smerak
+  [Thu, 13 Aug 2026 17:14:12 +0000] anonymous@example.com: Caféschema HT-26 v2
+  [Thu, 13 Aug 2026 18:01:15 +0000] anonymous@example.com: Vår butik i Bromma fyller 2 år – fira med oss🥳
+  [Thu, 13 Aug 2026 08:49:21 +0000] anonymous@example.com: Open for the 2027 Host City 👀
+  [Fri, 14 Aug 2026 07:58:29 +0000] anonymous@example.com: Västkustvillan veckans klicksuccé
+  [Thu, 13 Aug 2026 09:01:09 +0000] anonymous@example.com: Teknik som bara ska funka
+  [Thu, 13 Aug 2026 12:38:52 +0000] anonymous@example.com: Bockjakten är runt hörnet - gör dig redo!
+  [Thu, 13 Aug 2026 19:18:26 +0000] anonymous@example.com: This week on AI kruh: August 6 - August 13, 2026
+
+Deleting 14 messages...
+  moved to trash 10/14
+  moved to trash 14/14
+Purging 14 messages from Trash...
+Permanently deleted 14 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge bad">FAILED (exit 128)</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 85 events to index.html
+[main b0fac6f] update 2026-08-28
+ 1 file changed, 23 insertions(+), 23 deletions(-)
+[stderr]
+fatal: could not read Username for &#x27;https://github.com&#x27;: Device not configured</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-08-27 10:05:00</h2>
     <div class="task">
