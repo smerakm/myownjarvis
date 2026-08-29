@@ -63,7 +63,135 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-08-28 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-08-29 09:08 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-08-29 10:14:47</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge bad">FAILED (exit 1)</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 52 unread, 279 from the last 12 days (280 unique candidates). Fetching headers...
+[stderr]
+Traceback (most recent call last):
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 33, in main
+    headers = imap_client.fetch_headers(conn, candidate_uids)
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 78, in fetch_headers
+    return _fetch(conn, uids, &quot;BODY.PEEK[HEADER]&quot;)
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 66, in _fetch
+    typ, msg_data = conn.uid(&quot;fetch&quot;, uid, f&quot;(X-GM-THRID {spec})&quot;)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 890, in uid
+    typ, dat = self._simple_command(name, command, *args)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1230, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1047, in _command_complete
+    typ, data = self._get_tagged_response(tag, expect_bye=logout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1173, in _get_tagged_response
+    self._get_response()
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1075, in _get_response
+    resp = self._get_line()
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1183, in _get_line
+    line = self.readline()
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 323, in readline
+    line = self.file.readline(_MAXLINE + 1)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 704, in readinto
+    return self._sock.recv_into(b)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1006, in _command
+    self.send(data + CRLF)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 332, in send
+    self.sock.sendall(data)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1204, in sendall
+    v = self.send(byte_view[count:])
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1173, in send
+    return self._sslobj.write(data)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 83, in &lt;module&gt;
+    main()
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 70, in main
+    conn.logout()
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 642, in logout
+    typ, dat = self._simple_command(&#x27;LOGOUT&#x27;)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1230, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1008, in _command
+    raise self.abort(&#x27;socket error: %s&#x27; % val)
+imaplib.abort: socket error: [Errno 32] Broken pipe</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 19 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/19
+  fetched 19/19
+  [Fri, 14 Aug 2026 12:04:53 +0000] anonymous@example.com: Tillgängliga Salesforce-specialister
+  [Fri, 14 Aug 2026 17:32:20 +0000] anonymous@example.com: Scoutkåren tvingades lämna kyrkan efter försäljning
+  [Sat, 15 Aug 2026 08:24:48 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-21 18:30 för Matej Smerak
+  [Fri, 14 Aug 2026 11:31:34 +0000] anonymous@example.com: Netflix tonight?
+  [Fri, 14 Aug 2026 14:14:34 +0000] anonymous@example.com: Weekly preview: Doma s Teplicemi i domácí zápasy žen a béčka
+  [Fri, 14 Aug 2026 12:25:21 +0000] anonymous@example.com: Nu börjar äntligen matcherna 😍
+  [Sat, 15 Aug 2026 08:24:36 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-20 17:00 för Matej Smerak
+  [Fri, 14 Aug 2026 17:37:56 +0000] anonymous@example.com: You have 10+ new invitations
+  [Fri, 14 Aug 2026 16:12:00 +0000] anonymous@example.com: Keep Playing. Keep Playin’ It Forward 💙
+  [Fri, 14 Aug 2026 11:03:45 +0200] anonymous@example.com: ⌛24 Hours Left｜SPARKX i7 Nano Combo Launch Offer
+  [Sat, 15 Aug 2026 07:11:04 +0000] anonymous@example.com: Matchdag! Vi ses på Skytteholm
+  [Fri, 14 Aug 2026 20:07:11 +0000] anonymous@example.com: Thomas Charuhas - Chief Executive Officer reacted to this post: ✈️ I’m proud to share that…
+  [Sat, 15 Aug 2026 05:30:20 +0000] anonymous@example.com: 🎉 Idag firar vi – kom förbi butiken!
+  [Sat, 15 Aug 2026 08:24:25 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-18 19:30 för Matej Smerak
+  [Sat, 15 Aug 2026 09:31:07 +0200] anonymous@example.com: Snabbare release än någonsin — CCM Trigger Unleashed PRO är här
+  [Sat, 15 Aug 2026 08:51:00 +0000] anonymous@example.com: Nu drar vi igång!
+  [Fri, 14 Aug 2026 16:59:25 +0100] anonymous@example.com: Even Senior Pros Are Under Threat from AI ⚔️ The Latest Salesforce Data Theft
+  [Sat, 15 Aug 2026 08:24:09 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-17 17:00 för Matej Smerak
+  [Fri, 14 Aug 2026 18:04:55 +0000] anonymous@example.com: Jensen Huang, Founder and CEO, is popular in your network
+
+Deleting 19 messages...
+  moved to trash 10/19
+  moved to trash 19/19
+Purging 19 messages from Trash...
+Permanently deleted 19 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 85 events to index.html
+[main 9576fe2] update 2026-08-29
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   b0fac6f..9576fe2  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-08-28 10:05:01</h2>
     <div class="task">
@@ -140,6 +268,19 @@ Wrote 85 events to index.html
 [main b0fac6f] update 2026-08-28
  1 file changed, 23 insertions(+), 23 deletions(-)
 [stderr]
+fatal: could not read Username for &#x27;https://github.com&#x27;: Device not configured</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">UNKNOWN</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (2 run(s), 6 task(s))
+push: FAILED
 fatal: could not read Username for &#x27;https://github.com&#x27;: Device not configured</pre>
       </details>
     </div>
