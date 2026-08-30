@@ -63,7 +63,137 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-08-29 09:08 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-08-30 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-08-30 10:08:06</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge bad">FAILED (exit 1)</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+[stderr]
+Traceback (most recent call last):
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 83, in &lt;module&gt;
+    main()
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 24, in main
+    conn = imap_client.connect()
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 26, in connect
+    conn = imaplib.IMAP4_SSL(IMAP_HOST)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1324, in __init__
+    IMAP4.__init__(self, host, port, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 202, in __init__
+    self.open(host, port, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1337, in open
+    IMAP4.open(self, host, port, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 312, in open
+    self.sock = self._create_socket(timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1327, in _create_socket
+    sock = IMAP4._create_socket(self, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 302, in _create_socket
+    return socket.create_connection(address)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 822, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge bad">FAILED (exit 1)</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+[stderr]
+Traceback (most recent call last):
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/purge_old.py&quot;, line 86, in &lt;module&gt;
+    main()
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/purge_old.py&quot;, line 45, in main
+    conn = imap_client.connect()
+  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 26, in connect
+    conn = imaplib.IMAP4_SSL(IMAP_HOST)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1324, in __init__
+    IMAP4.__init__(self, host, port, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 202, in __init__
+    self.open(host, port, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1337, in open
+    IMAP4.open(self, host, port, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 312, in open
+    self.sock = self._create_socket(timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1327, in _create_socket
+    sock = IMAP4._create_socket(self, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 302, in _create_socket
+    return socket.create_connection(address)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 822, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge bad">FAILED (exit 1)</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stderr]
+Traceback (most recent call last):
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1012, in _send_output
+    self.send(msg)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 952, in send
+    self.connect()
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1419, in connect
+    super().connect()
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 923, in connect
+    self.sock = self._create_connection(
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 822, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/Users/marek/LABS/01-projects/AIK_calendar_subs/generate.py&quot;, line 438, in &lt;module&gt;
+    main()
+  File &quot;/Users/marek/LABS/01-projects/AIK_calendar_subs/generate.py&quot;, line 425, in main
+    raw = fetch_ics(url)
+  File &quot;/Users/marek/LABS/01-projects/AIK_calendar_subs/generate.py&quot;, line 47, in fetch_ics
+    with urllib.request.urlopen(req, timeout=30) as resp:
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 517, in open
+    response = self._open(req, data)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 494, in _call_chain
+    result = func(*args)
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: &lt;urlopen error [Errno 8] nodename nor servname provided, or not known&gt;</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-08-29 10:14:47</h2>
     <div class="task">
@@ -189,6 +319,18 @@ Wrote 85 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    b0fac6f..9576fe2  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">UNKNOWN</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (3 run(s), 10 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
