@@ -63,7 +63,94 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-08-30 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-08-31 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-08-31 10:05:00</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 87 unread, 263 from the last 12 days (265 unique candidates). Fetching headers...
+  fetched 10/265
+    ... 25 more progress lines ...
+  fetched 265/265
+224 messages to render. Fetching full content...
+  fetched 10/224
+    ... 21 more progress lines ...
+  fetched 224/224
+Categorizing 224 messages...
+Labeling and marking as read 182 messages...
+  processed 10/182
+    ... 17 more progress lines ...
+  processed 182/182
+Applied labels to 182/182, marked 182/182 as read.
+Rendering HTML page...
+Wrote 224 categorized messages to output/index.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 22 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/22
+  fetched 20/22
+  fetched 22/22
+  [Sat, 15 Aug 2026 11:24:30 +0000] anonymous@example.com: Coming on Monday, 17 August... Cocomelon: The Melon Patch
+  [Sun, 16 Aug 2026 19:01:04 +0000] anonymous@example.com: ⏰ 3h kvar – rabatten försvinner ikväll!
+  [Mon, 17 Aug 2026 07:00:44 +0000] anonymous@example.com: Spara 50 % på alla skärmskydd
+  [Sun, 16 Aug 2026 09:16:29 +0000] anonymous@example.com: Månadens Erbjudande - Husqvarnas leksaker
+  [Sun, 16 Aug 2026 13:14:35 +0000] anonymous@example.com: Vinn ett exklusivt matchpaket till hemmamatchen mot GAIS!
+  [Sun, 16 Aug 2026 07:52:26 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Sun, 16 Aug 2026 11:10:30 +0000] anonymous@example.com: Check out this week’s top 10 films: Sweden
+  [Sun, 16 Aug 2026 11:02:49 +0200] anonymous@example.com: ✨Why We&#x27;re Highlighting These Products Right Now
+  [Mon, 17 Aug 2026 08:04:54 +0000] anonymous@example.com: Bohdan Kostenko and Akshaye Sharma want to join your network
+  [Sun, 16 Aug 2026 05:30:11 +0000] anonymous@example.com: Sista dagen på jubileet – vi ses i butiken!
+  [Sun, 16 Aug 2026 14:53:19 +0000] anonymous@example.com: Derbyseger!
+  [Sun, 16 Aug 2026 11:14:24 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-08-20 06:45 för Matej Smerak
+  [Sat, 15 Aug 2026 11:28:56 +0000] anonymous@example.com: The best places to be in September
+  [Sun, 16 Aug 2026 18:37:56 +0000] anonymous@example.com: You have 10+ new invitations
+  [Sun, 16 Aug 2026 16:34:57 +0100] anonymous@example.com:  We Added Another Dreamforce Lunch 👀
+  [Sat, 15 Aug 2026 15:07:51 +0100] anonymous@example.com: The Picklist ☕ Salesforce Professionals Leaving, The Ultimate Guide to Claude, and Winter ‘27 Prep
+  [Sat, 15 Aug 2026 18:37:56 +0000] anonymous@example.com: You have 10+ new invitations
+  [Mon, 17 Aug 2026 05:00:45 +0000] anonymous@example.com: Vi firar 40 år av fynd 💛
+  [Sun, 16 Aug 2026 08:39:54 +0200] anonymous@example.com: Den 23 augusti smyger vi igång AIK Innebandyskola!
+  [Sat, 15 Aug 2026 13:31:04 +0000] anonymous@example.com: ChatGPT v Chrome
+  [Sun, 16 Aug 2026 13:06:56 +0000] anonymous@example.com: Söndagsklipp - Upp till 60% rabatt! 👀
+  [Sun, 16 Aug 2026 03:02:30 -0600] anonymous@example.com: Har du hakat på trenden än? 🥾
+
+Deleting 22 messages...
+  moved to trash 10/22
+  moved to trash 20/22
+  moved to trash 22/22
+Purging 22 messages from Trash...
+Permanently deleted 22 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 85 events to index.html
+No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-08-30 10:08:06</h2>
     <div class="task">
@@ -191,6 +278,19 @@ Traceback (most recent call last):
   File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1349, in do_open
     raise URLError(err)
 urllib.error.URLError: &lt;urlopen error [Errno 8] nodename nor servname provided, or not known&gt;</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">UNKNOWN</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (4 run(s), 14 task(s))
+push: FAILED
+fatal: unable to access &#x27;https://github.com/smerakm/myownjarvis/&#x27;: Could not resolve host: github.com</pre>
       </details>
     </div>
   </section>
