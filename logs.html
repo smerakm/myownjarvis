@@ -63,7 +63,86 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-01 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-02 08:09 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-02 10:05:06</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 58 unread, 274 from the last 12 days (278 unique candidates). Fetching headers...
+  fetched 10/278
+    ... 26 more progress lines ...
+  fetched 278/278
+232 messages to render. Fetching full content...
+  fetched 10/232
+    ... 22 more progress lines ...
+  fetched 232/232
+Categorizing 232 messages...
+Labeling and marking as read 190 messages...
+  processed 10/190
+    ... 17 more progress lines ...
+  processed 190/190
+Applied labels to 190/190, marked 190/190 as read.
+Rendering HTML page...
+Wrote 232 categorized messages to output/index.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 12 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/12
+  fetched 12/12
+  [Wed, 19 Aug 2026 08:12:47 +0200] anonymous@example.com: 3 nya bostäder i din bevakning på Booli 🎉
+  [Tue, 18 Aug 2026 17:36:27 +0100] anonymous@example.com:  The Salesforce Ben Afterparty Just Got Louder 🔥
+  [Tue, 18 Aug 2026 11:00:23 +0200] anonymous@example.com: WEBINAR REMINDER: Upgrade Calmly your Dynamics NAV to Business Central
+  [Tue, 18 Aug 2026 11:34:29 +0000] anonymous@example.com: Coming on Thursday, 20 August... Blood Sacrifice
+  [Tue, 18 Aug 2026 14:46:35 +0000] anonymous@example.com: EuroForce teammates have a Zip invite waiting for you. 📬
+  [Tue, 18 Aug 2026 12:02:36 +0200] anonymous@example.com: AIK Innebandy Ledarträff - Inför
+  [Tue, 18 Aug 2026 19:00:11 +0000] anonymous@example.com: Kallelse Motionslag Herr-Syd: Innebandy 2026-08-23 21:00 för Marek Smerak
+  [Tue, 18 Aug 2026 08:46:06 +0000] anonymous@example.com: 20% rabatt på ALLT från Unihoc 🏑
+  [Tue, 18 Aug 2026 06:11:09 -0600] anonymous@example.com: Säkra höstens resor fr. 499:-
+  [Tue, 18 Aug 2026 13:09:02 +0000] anonymous@example.com: Garage på köpet värde 2499 kr! 🤖
+  [Tue, 18 Aug 2026 05:24:37 -0600] anonymous@example.com: Säkra höstens resor fr. 499:-
+  [Wed, 19 Aug 2026 06:31:13 +0000] anonymous@example.com: Spara stort idag!
+
+Deleting 12 messages...
+  moved to trash 10/12
+  moved to trash 12/12
+Purging 12 messages from Trash...
+Permanently deleted 12 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 83 events to index.html
+[main 145f369] update 2026-09-02
+ 1 file changed, 24 insertions(+), 69 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   9576fe2..145f369  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-01 10:05:05</h2>
     <div class="task">
@@ -138,6 +217,18 @@ Permanently deleted 14 messages.</pre>
         <pre>[stdout]
 Wrote 85 events to index.html
 No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">UNKNOWN</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (6 run(s), 22 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
