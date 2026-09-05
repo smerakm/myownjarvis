@@ -63,7 +63,90 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-04 08:09 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-05 08:09 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-05 10:05:04</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 75 unread, 310 from the last 12 days (317 unique candidates). Fetching headers...
+  fetched 10/317
+    ... 30 more progress lines ...
+  fetched 317/317
+266 messages to render. Fetching full content...
+  fetched 10/266
+    ... 25 more progress lines ...
+  fetched 266/266
+Categorizing 266 messages...
+Labeling and marking as read 212 messages...
+  processed 10/212
+    ... 20 more progress lines ...
+  processed 212/212
+Applied labels to 212/212, marked 212/212 as read.
+Rendering HTML page...
+Wrote 266 categorized messages to output/index.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 16 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/16
+  fetched 16/16
+  [Sat, 22 Aug 2026 08:06:05 +0000] anonymous@example.com: Dags att bunkra - endast 60 kr/st 🔥
+  [Fri, 21 Aug 2026 09:49:31 +0000] anonymous@example.com: seznámení
+  [Fri, 21 Aug 2026 13:52:26 +0000] anonymous@example.com: Uzavřené živé vysílání?
+  [Fri, 21 Aug 2026 11:01:06 +0200] anonymous@example.com: Scanner Sale: 20% Off
+  [Fri, 21 Aug 2026 14:21:53 +0000] anonymous@example.com: 20% rabatt på ALLT från Unihoc 🏑
+  [Fri, 21 Aug 2026 17:37:56 +0000] anonymous@example.com: You have 10+ new invitations
+  [Sat, 22 Aug 2026 04:45:30 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-08-27 06:45 för Matej Smerak
+  [Sat, 22 Aug 2026 05:42:13 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-24 18:00 för Matej Smerak
+  [Fri, 21 Aug 2026 17:04:07 +0100] anonymous@example.com: What’s Coming Ahead of Dreamforce? 🌆 Could Salesforce Become ‘SalesforceSlack’?
+  [Fri, 21 Aug 2026 17:33:53 +0000] anonymous@example.com: Krock efter polisjakt – tre till sjukhus
+  [Fri, 21 Aug 2026 19:37:45 +0000] anonymous@example.com: Söndag: Hemmamatch på 3Arena! 
+  [Fri, 21 Aug 2026 12:57:42 +0000] anonymous@example.com: We’ve added something you might like...
+  [Sat, 22 Aug 2026 08:09:29 +0200] anonymous@example.com: 3 nya bostäder i din bevakning på Booli 🎉
+  [Sat, 22 Aug 2026 05:42:31 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-25 20:00 för Matej Smerak
+  [Fri, 21 Aug 2026 14:15:49 +0000] anonymous@example.com: Säkra säsongen. Spara 2 283 kr!
+  [Fri, 21 Aug 2026 20:14:25 +0000] anonymous@example.com: NEWS + Win Justin’s PRS Silver Sky!
+
+Deleting 16 messages...
+  moved to trash 10/16
+  moved to trash 16/16
+Purging 16 messages from Trash...
+Permanently deleted 16 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 83 events to index.html
+[main f4745da] update 2026-09-05
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   7cabe3b..f4745da  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-04 10:05:03</h2>
     <div class="task">
@@ -141,6 +224,18 @@ Permanently deleted 17 messages.</pre>
         <pre>[stdout]
 Wrote 83 events to index.html
 No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">UNKNOWN</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (9 run(s), 34 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
