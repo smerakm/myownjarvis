@@ -63,7 +63,83 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-05 08:09 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-06 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-06 10:05:01</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 71 unread, 306 from the last 12 days (314 unique candidates). Fetching headers...
+  fetched 10/314
+    ... 30 more progress lines ...
+  fetched 314/314
+267 messages to render. Fetching full content...
+  fetched 10/267
+    ... 25 more progress lines ...
+  fetched 267/267
+Categorizing 267 messages...
+Labeling and marking as read 205 messages...
+  processed 10/205
+    ... 19 more progress lines ...
+  processed 205/205
+Applied labels to 205/205, marked 205/205 as read.
+Rendering HTML page...
+Wrote 267 categorized messages to output/index.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 9 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 9/9
+  [Sat, 22 Aug 2026 11:01:39 +0200] anonymous@example.com: ✨Back in Stock Alert: K2 Combo, save €160 today.
+  [Sun, 23 Aug 2026 07:30:38 +0000] anonymous@example.com: Sista chansen för 20% på Unihoc ⏰
+  [Sat, 22 Aug 2026 17:37:55 +0000] anonymous@example.com: You have 10+ new invitations
+  [Sat, 22 Aug 2026 15:03:24 +0100] anonymous@example.com: The Picklist ☕ Winter ‘27 Features for Admins, Devs, and Flow &amp; A Possible ‘SalesforceSlack’ Rebrand?
+  [Sat, 22 Aug 2026 11:03:06 +0000] anonymous@example.com: 5 festivals left this summer
+  [Sat, 22 Aug 2026 12:22:33 +0000] anonymous@example.com: Our top action picks for you
+  [Sat, 22 Aug 2026 19:10:17 +0200] anonymous@example.com: Ledarutbildningen imorgon oklarheter??
+  [Sat, 22 Aug 2026 18:04:53 +0000] anonymous@example.com: Anders Månsson - Uppdragsledare reacted to this post: Hi all Friends!
+
+After almost…
+  [Sun, 23 Aug 2026 06:03:02 +0100] anonymous@example.com: Our 2026 Salesforce Developer Survey Is Now Open
+
+Deleting 9 messages...
+  moved to trash 9/9
+Purging 9 messages from Trash...
+Permanently deleted 9 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 83 events to index.html
+[main 17fd26e] update 2026-09-06
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   f4745da..17fd26e  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-05 10:05:04</h2>
     <div class="task">
@@ -144,6 +220,18 @@ Wrote 83 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    7cabe3b..f4745da  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">UNKNOWN</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (10 run(s), 38 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
