@@ -78,6 +78,30 @@
       color: var(--muted);
       font-size: .95rem;
     }
+    .card p code {
+      font: .85em/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      padding: .1em .35em;
+      border-radius: 4px;
+      background: rgba(127, 127, 127, .18);
+    }
+    .card .copied {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .card .path {
+      display: block;
+      margin-top: .5rem;
+      padding: .5rem .6rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+      font: .8rem/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+    /* .card .path outranks the UA rule for [hidden], so restate it. */
+    .card .path[hidden] { display: none; }
     footer {
       margin-top: 3rem;
       color: var(--muted);
@@ -101,9 +125,16 @@
       <p>AIK p12/13 och Utveckling kalender</p>
     </a>
 
-    <a class="card" href="file:///Users/marek/LABS/01-projects/Email_Crawl/output/index.html">
-      <h2>Marek's emails <span class="arrow">&rarr;</span></h2>
-      <p>local file with email crawler</p>
+    <a class="card" id="emails-card"
+       href="file:///Users/marek/LABS/01-projects/Email_Crawl/output/index.html">
+      <h2>Marek's emails <span class="arrow">&#10697;</span></h2>
+      <p>
+        <span class="hint">Local email-crawler report. Browsers block
+          <code>file://</code> links from a hosted page &mdash; click to copy the
+          path, then paste it into a new tab.</span>
+        <span class="copied" hidden>Path copied &mdash; paste it into a new tab.</span>
+      </p>
+      <span class="path" hidden>file:///Users/marek/LABS/01-projects/Email_Crawl/output/index.html</span>
     </a>
 
     <footer>
@@ -111,5 +142,62 @@
       <a href="https://github.com/smerakm/myownjarvis">source</a>
     </footer>
   </main>
+
+  <script>
+    (function () {
+      var card = document.getElementById('emails-card');
+      var hint = card.querySelector('.hint');
+      var copied = card.querySelector('.copied');
+      var field = card.querySelector('.path');
+      var path = field.textContent;
+      var timer;
+
+      function show(el) {
+        hint.hidden = el !== hint;
+        copied.hidden = el !== copied;
+      }
+
+      function selectPath() {
+        var range = document.createRange();
+        range.selectNodeContents(field);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }
+
+      function reveal() {
+        // Clipboard unavailable (or refused): show the path, pre-selected, so
+        // it can be copied by hand.
+        show(hint);
+        field.hidden = false;
+        selectPath();
+      }
+
+      function flash() {
+        show(copied);
+        field.hidden = true;
+        clearTimeout(timer);
+        timer = setTimeout(function () { show(hint); }, 4000);
+      }
+
+      card.addEventListener('click', function (e) {
+        // Don't re-copy while the fallback text is being selected by hand.
+        if (field.contains(e.target)) return;
+        e.preventDefault();
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(path).then(flash, reveal);
+          return;
+        }
+
+        // Older browsers: copy through a temporary selection.
+        field.hidden = false;
+        selectPath();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+        ok ? flash() : reveal();
+      });
+    })();
+  </script>
 </body>
 </html>
