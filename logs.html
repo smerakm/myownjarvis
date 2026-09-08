@@ -63,7 +63,90 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-07 08:08 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-08 08:09 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-08 10:05:02</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 58 unread, 288 from the last 12 days (301 unique candidates). Fetching headers...
+  fetched 10/301
+    ... 29 more progress lines ...
+  fetched 301/301
+248 messages to render. Fetching full content...
+  fetched 10/248
+    ... 23 more progress lines ...
+  fetched 248/248
+Categorizing 248 messages...
+Labeling and marking as read 206 messages...
+  processed 10/206
+    ... 19 more progress lines ...
+  processed 206/206
+Applied labels to 206/206, marked 206/206 as read.
+Rendering HTML page...
+Wrote 248 categorized messages to output/index.html
+Summarizing categories with Claude...
+Could not write the brief page: No Anthropic API key. Put one in anthropic_credentials.json as {&quot;api_key&quot;: &quot;sk-ant-...&quot;} or export ANTHROPIC_API_KEY.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 14 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/14
+  fetched 14/14
+  [Tue, 25 Aug 2026 06:46:42 +0000] anonymous@example.com: Medlemserbjudande!
+  [Mon, 24 Aug 2026 15:08:23 +0000] anonymous@example.com: Coming on Wednesday, 26 August... Death of the Pastor&#x27;s Wife
+  [Tue, 25 Aug 2026 07:53:17 +0200] anonymous@example.com: 2 nya bostäder i din bevakning på Booli 🎉
+  [Mon, 24 Aug 2026 18:04:55 +0000] anonymous@example.com: Karen Fidelak reacted to this post: 🚀 Have you tried the Next…
+  [Mon, 24 Aug 2026 17:10:07 +0100] anonymous@example.com: Salesforce Partners Not Seeing ROI 📉 Is Your Career Future-Proof?
+  [Tue, 25 Aug 2026 05:36:04 +0000] anonymous@example.com: Jitka Pospíšilová posted in Představte se
+  [Mon, 24 Aug 2026 18:05:11 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys - styrka 2026-08-26 18:00 för Matej Smerak
+  [Mon, 24 Aug 2026 14:42:36 +0000] anonymous@example.com: Září na Spartě patří dětem!
+  [Mon, 24 Aug 2026 12:01:48 +0200] anonymous@example.com: ⚡ Flash Sale: 7 Days Only
+  [Tue, 25 Aug 2026 08:00:27 +0000] anonymous@example.com: Bo i ett gammalt stationshus
+  [Mon, 24 Aug 2026 17:33:52 +0000] anonymous@example.com: Kraschade bilen – sedan försvann de i tunneln
+  [Mon, 24 Aug 2026 18:18:25 +0000] anonymous@example.com: Kallelse Hockeyfritids: Hockeyfritids 2026-08-26 14:00 för Matej Smerak
+  [Mon, 24 Aug 2026 17:37:55 +0000] anonymous@example.com: You have 10+ new invitations
+  [Mon, 24 Aug 2026 10:04:55 +0000] anonymous@example.com: 74 people viewed your profile
+
+Deleting 14 messages...
+  moved to trash 10/14
+  moved to trash 14/14
+Purging 14 messages from Trash...
+Permanently deleted 14 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 83 events to index.html
+[main 1b2ccb3] update 2026-09-08
+ 1 file changed, 39 insertions(+), 39 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   488cca0..1b2ccb3  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-07 10:05:05</h2>
     <div class="task">
@@ -134,6 +217,18 @@ Wrote 83 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    17fd26e..488cca0  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (12 run(s), 46 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
