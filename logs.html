@@ -63,7 +63,118 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-11 08:14 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-12 08:15 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-12 10:05:02</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 54 unread, 306 from the last 12 days (311 unique candidates). Fetching headers...
+  fetched 10/311
+    ... 30 more progress lines ...
+  fetched 311/311
+242 messages to render. Fetching full content...
+  fetched 10/242
+    ... 23 more progress lines ...
+  fetched 242/242
+Categorizing 242 messages...
+Labeling and marking as read 208 messages...
+  processed 10/208
+    ... 19 more progress lines ...
+  processed 208/208
+Applied labels to 208/208, marked 208/208 as read.
+Rendering HTML page...
+Wrote 242 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/8] Private / Personal (33 messages)...
+    ok — 8 highlights (50530 in / 2708 out, 0 cached)
+  [2/8] School (1 messages)...
+    ok — 1 highlights (1745 in / 290 out, 1032 cached)
+  [3/8] Finance (14 messages)...
+    ok — 8 highlights (8733 in / 1805 out, 1032 cached)
+  [4/8] Family / Kids monitoring (5 messages)...
+    ok — 3 highlights (8861 in / 596 out, 1032 cached)
+  [5/8] Social (27 messages)...
+    ok — 8 highlights (78523 in / 5130 out, 1032 cached)
+  [6/8] Sport notifications (34 messages)...
+    ok — 8 highlights (30828 in / 2403 out, 1032 cached)
+  [7/8] Offers (55 messages)...
+    ok — 8 highlights (90596 in / 2901 out, 1032 cached)
+  [8/8] Newsletter (73 messages)...
+    ok — 8 highlights (160062 in / 4423 out, 1032 cached)
+Wrote 8 summarized sections to output/enhancedSummary.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 23 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/23
+  fetched 20/23
+  fetched 23/23
+  [Fri, 28 Aug 2026 14:43:52 +0000] anonymous@example.com: Weekly preview: Derby je tady!
+  [Fri, 28 Aug 2026 16:46:06 +0100] anonymous@example.com: Salesforce and Anthropic Announce &#x27;Claudeforce&#x27; 🎸 Dreamfest Headliners Revealed
+  [Fri, 28 Aug 2026 13:11:16 +0000] anonymous@example.com: Nu lanseras AIK Försäkringar!
+  [Fri, 28 Aug 2026 18:04:54 +0000] anonymous@example.com: Jussi Järvinen - Data and analytics consultant reacted to this post: Wow! What a send-off! 🤩 I’m…
+  [Fri, 28 Aug 2026 11:22:36 +0000] anonymous@example.com: NFL Melbourne Game is on the way
+  [Sat, 29 Aug 2026 07:11:49 +0000] anonymous@example.com: Familjedag och AIK på Skyttan!
+  [Sat, 29 Aug 2026 08:16:17 +0200] anonymous@example.com: 3 nya bostäder i din bevakning på Booli 🎉
+  [Sat, 29 Aug 2026 06:47:16 +0000] anonymous@example.com: 3 INZANE för 195 kr – bara till 30 aug
+  [Sat, 29 Aug 2026 05:45:58 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-31 18:00 för Matej Smerak
+  [Fri, 28 Aug 2026 09:03:43 +0000] anonymous@example.com: A passkey was added to your account
+  [Sat, 29 Aug 2026 07:46:24 +0000] anonymous@example.com: SISTA CHANSEN: Sommar-REA
+  [Fri, 28 Aug 2026 11:15:52 +0000] anonymous@example.com: Uppdaterade villkor: Handla för 499 kr få 50 kr rabatt
+  [Fri, 28 Aug 2026 17:37:55 +0000] anonymous@example.com: You have 10+ new invitations
+  [Fri, 28 Aug 2026 16:18:09 +0000] anonymous@example.com: Hemmamatch och derby väntar i helgen!
+  [Sat, 29 Aug 2026 04:45:19 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-09-03 06:45 för Matej Smerak
+  [Fri, 28 Aug 2026 17:32:11 +0000] anonymous@example.com: AIK:s nya bas i Solna försenas – igen
+  [Sat, 29 Aug 2026 05:46:18 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-09-01 20:00 för Matej Smerak
+  [Sat, 29 Aug 2026 07:06:05 +0000] anonymous@example.com: JUST NU: Upp till 62% rabatt på kläder &amp; skor! 🚨
+  [Fri, 28 Aug 2026 11:03:19 +0200] anonymous@example.com: 8% off for subscribers – and that&#x27;s not all
+  [Sat, 29 Aug 2026 05:47:11 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-09-04 19:00 för Matej Smerak
+  [Fri, 28 Aug 2026 09:03:43 +0000] anonymous@example.com: A passkey was added to your account
+  [Fri, 28 Aug 2026 16:04:54 +0000] anonymous@example.com: Yann LeCun, Executive Chairman, is popular in your network
+  [Sat, 29 Aug 2026 05:46:47 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys - styrka 2026-09-02 18:00 för Matej Smerak
+
+Deleting 23 messages...
+  moved to trash 10/23
+  moved to trash 20/23
+  moved to trash 23/23
+Purging 23 messages from Trash...
+Permanently deleted 23 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 96 events to index.html
+[main c03a66f] update 2026-09-12
+ 1 file changed, 10 insertions(+), 56 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   c1af4f1..c03a66f  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-11 10:05:01</h2>
     <div class="task">
@@ -155,6 +266,18 @@ Permanently deleted 14 messages.</pre>
         <pre>[stdout]
 Wrote 98 events to index.html
 No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (16 run(s), 62 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
