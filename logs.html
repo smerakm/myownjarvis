@@ -63,7 +63,95 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-12 08:15 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-13 08:14 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-13 10:05:03</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 44 unread, 286 from the last 12 days (291 unique candidates). Fetching headers...
+  fetched 10/291
+    ... 28 more progress lines ...
+  fetched 291/291
+229 messages to render. Fetching full content...
+  fetched 10/229
+    ... 21 more progress lines ...
+  fetched 229/229
+Categorizing 229 messages...
+Labeling and marking as read 194 messages...
+  processed 10/194
+    ... 18 more progress lines ...
+  processed 194/194
+Applied labels to 194/194, marked 194/194 as read.
+Rendering HTML page...
+Wrote 229 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/8] Private / Personal (34 messages)...
+    ok — 8 highlights (51620 in / 2891 out, 0 cached)
+  [2/8] School (1 messages)...
+    ok — 1 highlights (1746 in / 295 out, 1032 cached)
+  [3/8] Finance (12 messages)...
+    ok — 8 highlights (8300 in / 1346 out, 1032 cached)
+  [4/8] Family / Kids monitoring (3 messages)...
+    ok — 3 highlights (5293 in / 577 out, 1032 cached)
+  [5/8] Social (24 messages)...
+    ok — 8 highlights (70070 in / 4844 out, 1032 cached)
+  [6/8] Sport notifications (32 messages)...
+    ok — 8 highlights (29778 in / 2151 out, 1032 cached)
+  [7/8] Offers (51 messages)...
+    ok — 8 highlights (88612 in / 3327 out, 1032 cached)
+  [8/8] Newsletter (72 messages)...
+    ok — 8 highlights (158015 in / 3594 out, 1032 cached)
+Wrote 8 summarized sections to output/enhancedSummary.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 8 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 8/8
+  [Sat, 29 Aug 2026 17:37:55 +0000] anonymous@example.com: You have 10+ new invitations
+  [Sat, 29 Aug 2026 16:18:41 +0000] anonymous@example.com: Lukáš Hirt - Freelance vývojář a fractional CTO
+  [Sat, 29 Aug 2026 11:42:41 +0000] anonymous@example.com: Skipped these national parks?
+  [Sat, 29 Aug 2026 12:13:34 +0000] anonymous@example.com: Feel the fear. The Whisper Man is here.
+  [Sat, 29 Aug 2026 15:06:08 +0100] anonymous@example.com: The Picklist ☕ Salesforce Announces Claudeforce, Partners See No Agentforce ROI, and the Most Wanted Salesforce Hire
+  [Sun, 30 Aug 2026 07:57:43 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Sun, 30 Aug 2026 07:34:43 +0000] anonymous@example.com: Derbydags på nationalarenan
+  [Sun, 30 Aug 2026 07:12:56 +0000] anonymous@example.com: Få ut mer av varje cykeltur 🚵
+
+Deleting 8 messages...
+  moved to trash 8/8
+Purging 8 messages from Trash...
+Permanently deleted 8 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 96 events to index.html
+No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-12 10:05:02</h2>
     <div class="task">
@@ -172,6 +260,18 @@ Wrote 96 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    c1af4f1..c03a66f  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (17 run(s), 66 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
