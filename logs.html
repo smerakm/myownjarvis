@@ -63,7 +63,38 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-22 08:05 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-23 08:05 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-23 10:05:04</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge skip">SKIPPED (not scheduled today)</span>
+      </div>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge skip">SKIPPED (not scheduled today)</span>
+      </div>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 93 events to index.html
+[main 47428e2] update 2026-09-23
+ 1 file changed, 133 insertions(+), 4 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   b3eb506..47428e2  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-22 10:05:01</h2>
     <div class="task">
@@ -92,6 +123,18 @@ Wrote 91 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    64d2dc6..b3eb506  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (27 run(s), 106 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
