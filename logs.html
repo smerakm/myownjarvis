@@ -63,7 +63,156 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-27 08:50 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-28 08:16 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-28 10:05:01</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 99 unread, 240 from the last 12 days (244 unique candidates). Fetching headers...
+  fetched 10/244
+    ... 23 more progress lines ...
+  fetched 244/244
+217 messages to render. Fetching full content...
+  fetched 10/217
+    ... 20 more progress lines ...
+  fetched 217/217
+Categorizing 217 messages...
+Labeling and marking as read 177 messages...
+  processed 10/177
+    ... 16 more progress lines ...
+  processed 177/177
+Applied labels to 177/177, marked 177/177 as read.
+Rendering HTML page...
+Wrote 217 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/8] Private / Personal (39 messages)...
+    ok — 8 highlights (57125 in / 1957 out, 0 cached)
+  [2/8] Account &amp; Security (1 messages)...
+    ok — 1 highlights (3661 in / 418 out, 1032 cached)
+  [3/8] Finance (6 messages)...
+    ok — 4 highlights (3043 in / 759 out, 1032 cached)
+  [4/8] Family / Kids monitoring (4 messages)...
+    ok — 2 highlights (10393 in / 681 out, 1032 cached)
+  [5/8] Social (24 messages)...
+    ok — 7 highlights (81073 in / 4439 out, 1032 cached)
+  [6/8] Sport notifications (40 messages)...
+    ok — 8 highlights (33768 in / 1965 out, 1032 cached)
+  [7/8] Offers (54 messages)...
+    ok — 8 highlights (99670 in / 3564 out, 1032 cached)
+  [8/8] Newsletter (49 messages)...
+    ok — 8 highlights (133061 in / 4458 out, 1032 cached)
+Wrote 8 summarized sections to output/enhancedSummary.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 61 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/61
+    ... 5 more progress lines ...
+  fetched 61/61
+  [Fri, 11 Sep 2026 13:40:42 +0000] anonymous@example.com: Weekly preview: Souboj s Jabloncem i Evropská liga
+  [Fri, 11 Sep 2026 06:16:12 +0000] anonymous@example.com: Allt inom ljud &amp; bild – på ett ställe
+  [Fri, 11 Sep 2026 17:00:19 +0000] anonymous@example.com: Fotade Säpos högkvarter på svensexan – fick 11 400 i böter
+  [Sun, 13 Sep 2026 07:12:02 +0000] anonymous@example.com: Livet är fullt av svåra val
+  [Sun, 13 Sep 2026 07:03:21 -0600] anonymous@example.com: 20% rabatt – resten av året! 😃
+  [Mon, 14 Sep 2026 08:05:22 +0000] anonymous@example.com: Akshat Agrawal wants to join your network
+  [Thu, 10 Sep 2026 12:12:25 +0000] anonymous@example.com: Ready... steady... fly ✈️
+  [Fri, 11 Sep 2026 08:50:05 +0000] anonymous@example.com: 20% rabatt på alla matchtröjor hos AIK Shop
+  [Fri, 11 Sep 2026 19:40:05 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys 2026-09-17 17:30 för Matej Smerak
+  [Thu, 10 Sep 2026 17:46:11 +0000] anonymous@example.com: You have 1 new invitation
+  [Sun, 13 Sep 2026 15:04:18 +0100] anonymous@example.com: The Picklist ☕ Salesforce Customers Overpaying, The Disappearing Dev Console, and the Admin&#x27;s Guide to MCP
+  [Thu, 10 Sep 2026 14:38:49 +0000] anonymous@example.com: 20-50% rabatt på allt från Salming 🔥
+  [Fri, 11 Sep 2026 18:59:32 +0000] anonymous@example.com: She’s the One + fresh September guitar news
+  [Fri, 11 Sep 2026 12:33:42 +0000] anonymous@example.com: Hockeycup Västerås - Gurkapucken 28-29 december
+  [Mon, 14 Sep 2026 09:12:30 +0200] anonymous@example.com: Lisa Sjöberg har skrivit i forumet...
+  [Thu, 10 Sep 2026 11:05:25 -0600] anonymous@example.com: En extra höstdag på köpet 🍂
+  [Fri, 11 Sep 2026 19:39:51 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys - styrka 2026-09-16 18:00 för Matej Smerak
+  [Fri, 11 Sep 2026 20:20:28 +0000] anonymous@example.com: Set up transfers ahead of time
+  [Sat, 12 Sep 2026 08:06:08 +0000] anonymous@example.com: Kampanj på Mammotion 🤑
+  [Thu, 10 Sep 2026 11:44:32 +0000] anonymous@example.com: Don&#x27;t forget to finish The Middle
+  [Fri, 11 Sep 2026 19:31:05 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-09-14 18:00 för Matej Smerak
+  [Sun, 13 Sep 2026 08:14:29 +0000] anonymous@example.com: Sista chansen! 20-50% på Salming 🔥
+  [Sat, 12 Sep 2026 08:26:46 +0200] anonymous@example.com: 2 nya bostäder i din bevakning på Booli 🎉
+  [Sun, 13 Sep 2026 18:47:00 +0000] anonymous@example.com: Kallelse Team 13 U14: Match 2026-09-18 20:00 för Matej Smerak
+  [Fri, 11 Sep 2026 17:38:29 +0000] anonymous@example.com: You have 1 new invitation
+  [Sat, 12 Sep 2026 11:26:47 +0000] anonymous@example.com: Where Bavaria&#x27;s festival found a new home
+  [Mon, 14 Sep 2026 07:10:31 +0000] anonymous@example.com: Höstens favoriter från Lundhags✨
+  [Fri, 11 Sep 2026 07:09:59 +0000] anonymous@example.com: Nu är den här: New Balance SC Rebel 👟
+  [Sat, 12 Sep 2026 04:45:28 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-09-17 06:45 för Matej Smerak
+  [Mon, 14 Sep 2026 06:00:37 +0000] anonymous@example.com: Allt för hemmafixaren!
+  [Sat, 12 Sep 2026 12:06:25 +0000] anonymous@example.com: Nu kan du förboka iPhone 18 Pro!
+  [Sun, 13 Sep 2026 16:46:26 +0200] anonymous@example.com: Ny person i ert lag: Edvard Wejdmark
+  [Thu, 10 Sep 2026 17:14:33 +0100] anonymous@example.com: Sign, send and track, all inside Salesforce
+  [Fri, 11 Sep 2026 16:01:26 +0000] anonymous@example.com: Custom är öppet igen.
+  [Sat, 12 Sep 2026 20:12:15 +0000] anonymous@example.com: Netflix tonight?
+  [Fri, 11 Sep 2026 20:02:49 +0000] anonymous@example.com: We’ve updated our Subscriber Agreement
+  [Thu, 10 Sep 2026 12:06:05 +0000] anonymous@example.com: Billigare blir det inte... 👀
+  [Sat, 12 Sep 2026 17:37:53 +0000] anonymous@example.com: You have 1 new invitation
+  [Sun, 13 Sep 2026 16:47:03 +0200] anonymous@example.com: Ny person i ert lag: Ted Carlbäck Schildauer
+  [Thu, 10 Sep 2026 16:45:17 +0200] anonymous@example.com: Ny person i ert lag: Alvin Öhrn
+  [Fri, 11 Sep 2026 19:39:35 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-09-15 20:00 för Matej Smerak
+  [Mon, 14 Sep 2026 06:16:39 +0000] anonymous@example.com: Kundfavoriter med toppbetyg!
+  [Sun, 13 Sep 2026 17:37:54 +0000] anonymous@example.com: You have 1 new invitation
+  [Fri, 11 Sep 2026 13:49:38 +0000] anonymous@example.com: Kallelse Team 13 U14: Gurkapucken Västerås - 28-29/12 - INTRESSEANMÄLAN 2026-12-28 08:00 för Matej Smerak
+  [Fri, 11 Sep 2026 07:59:26 +0000] anonymous@example.com: Röby gård till salu – för 45 miljoner
+  [Sat, 12 Sep 2026 18:52:26 +0000] anonymous@example.com: We noticed a new login
+  [Sat, 12 Sep 2026 12:13:24 +0000] anonymous@example.com: Spara minst 30 % på hotell 🏨
+  [Thu, 10 Sep 2026 20:24:59 +0200] anonymous@example.com: Ny person i ert lag: Elias Sjögren Maurie
+  [Sun, 13 Sep 2026 08:05:34 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Fri, 11 Sep 2026 19:41:46 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-09-19 16:00 för Matej Smerak
+  [Sun, 13 Sep 2026 21:30:15 +0200] anonymous@example.com: Ny person i ert lag: Gustav Nordlöf
+  [Fri, 11 Sep 2026 17:23:46 +0100] anonymous@example.com: Does Claudeforce Erase Agentforce&#x27;s Relevance?  Get Ready for Dreamforce!
+  [Fri, 11 Sep 2026 16:29:44 +0000] anonymous@example.com: Hemmamatch på söndag – endast ett fåtal biljetter kvar!
+  [Mon, 14 Sep 2026 07:28:16 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Sun, 13 Sep 2026 13:41:29 +0000] anonymous@example.com: Vstupenky na Pardubice
+  [Fri, 11 Sep 2026 18:04:57 +0000] anonymous@example.com: Michal Verner - Salesforce Development Team Leader reacted to this post: Did a fun thing this morning.…
+  [Fri, 11 Sep 2026 19:39:19 +0000] anonymous@example.com: Kallelse Team 13 U14: Teori 2026-09-15 18:00 för Matej Smerak
+  [Sat, 12 Sep 2026 06:40:59 +0000] anonymous@example.com: Tillbaka på nationalarenan!
+  [Mon, 14 Sep 2026 00:44:55 +0100] anonymous@example.com: Two Days Until the SF Ben Afterparty 🎉
+  [Fri, 11 Sep 2026 09:10:58 +0000] anonymous@example.com: Do fish get thirsty?
+  [Sun, 13 Sep 2026 09:11:52 +0200] anonymous@example.com: Aerodynamiska takräcken från Thule till kampanjpris
+
+Deleting 61 messages...
+  moved to trash 10/61
+    ... 5 more progress lines ...
+  moved to trash 61/61
+Purging 61 messages from Trash...
+Permanently deleted 61 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 94 events to index.html
+[main f7a5c19] update 2026-09-28
+ 1 file changed, 27 insertions(+), 4 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   ebc79be..f7a5c19  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-27 10:16:08</h2>
     <div class="task">
@@ -118,6 +267,19 @@ Traceback (most recent call last):
   File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1099, in read
     return self._sslobj.read(len, buffer)
 TimeoutError: [Errno 60] Operation timed out</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 2 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
@@ -2626,146 +2788,6 @@ urllib.error.URLError: &lt;urlopen error [Errno 8] nodename nor servname provide
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (4 run(s), 14 task(s))
 push: FAILED
 fatal: unable to access &#x27;https://github.com/smerakm/myownjarvis/&#x27;: Could not resolve host: github.com</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-08-29 10:14:47</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge bad">FAILED (exit 1)</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 52 unread, 279 from the last 12 days (280 unique candidates). Fetching headers...
-[stderr]
-Traceback (most recent call last):
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 33, in main
-    headers = imap_client.fetch_headers(conn, candidate_uids)
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 78, in fetch_headers
-    return _fetch(conn, uids, &quot;BODY.PEEK[HEADER]&quot;)
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 66, in _fetch
-    typ, msg_data = conn.uid(&quot;fetch&quot;, uid, f&quot;(X-GM-THRID {spec})&quot;)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 890, in uid
-    typ, dat = self._simple_command(name, command, *args)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1230, in _simple_command
-    return self._command_complete(name, self._command(name, *args))
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1047, in _command_complete
-    typ, data = self._get_tagged_response(tag, expect_bye=logout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1173, in _get_tagged_response
-    self._get_response()
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1075, in _get_response
-    resp = self._get_line()
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1183, in _get_line
-    line = self.readline()
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 323, in readline
-    line = self.file.readline(_MAXLINE + 1)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 704, in readinto
-    return self._sock.recv_into(b)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1099, in read
-    return self._sslobj.read(len, buffer)
-ConnectionResetError: [Errno 54] Connection reset by peer
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1006, in _command
-    self.send(data + CRLF)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 332, in send
-    self.sock.sendall(data)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1204, in sendall
-    v = self.send(byte_view[count:])
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py&quot;, line 1173, in send
-    return self._sslobj.write(data)
-BrokenPipeError: [Errno 32] Broken pipe
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 83, in &lt;module&gt;
-    main()
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 70, in main
-    conn.logout()
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 642, in logout
-    typ, dat = self._simple_command(&#x27;LOGOUT&#x27;)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1230, in _simple_command
-    return self._command_complete(name, self._command(name, *args))
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1008, in _command
-    raise self.abort(&#x27;socket error: %s&#x27; % val)
-imaplib.abort: socket error: [Errno 32] Broken pipe</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 19 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
-Fetching headers for review...
-  fetched 10/19
-  fetched 19/19
-  [Fri, 14 Aug 2026 12:04:53 +0000] anonymous@example.com: Tillgängliga Salesforce-specialister
-  [Fri, 14 Aug 2026 17:32:20 +0000] anonymous@example.com: Scoutkåren tvingades lämna kyrkan efter försäljning
-  [Sat, 15 Aug 2026 08:24:48 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-21 18:30 för Matej Smerak
-  [Fri, 14 Aug 2026 11:31:34 +0000] anonymous@example.com: Netflix tonight?
-  [Fri, 14 Aug 2026 14:14:34 +0000] anonymous@example.com: Weekly preview: Doma s Teplicemi i domácí zápasy žen a béčka
-  [Fri, 14 Aug 2026 12:25:21 +0000] anonymous@example.com: Nu börjar äntligen matcherna 😍
-  [Sat, 15 Aug 2026 08:24:36 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-20 17:00 för Matej Smerak
-  [Fri, 14 Aug 2026 17:37:56 +0000] anonymous@example.com: You have 10+ new invitations
-  [Fri, 14 Aug 2026 16:12:00 +0000] anonymous@example.com: Keep Playing. Keep Playin’ It Forward 💙
-  [Fri, 14 Aug 2026 11:03:45 +0200] anonymous@example.com: ⌛24 Hours Left｜SPARKX i7 Nano Combo Launch Offer
-  [Sat, 15 Aug 2026 07:11:04 +0000] anonymous@example.com: Matchdag! Vi ses på Skytteholm
-  [Fri, 14 Aug 2026 20:07:11 +0000] anonymous@example.com: Thomas Charuhas - Chief Executive Officer reacted to this post: ✈️ I’m proud to share that…
-  [Sat, 15 Aug 2026 05:30:20 +0000] anonymous@example.com: 🎉 Idag firar vi – kom förbi butiken!
-  [Sat, 15 Aug 2026 08:24:25 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-18 19:30 för Matej Smerak
-  [Sat, 15 Aug 2026 09:31:07 +0200] anonymous@example.com: Snabbare release än någonsin — CCM Trigger Unleashed PRO är här
-  [Sat, 15 Aug 2026 08:51:00 +0000] anonymous@example.com: Nu drar vi igång!
-  [Fri, 14 Aug 2026 16:59:25 +0100] anonymous@example.com: Even Senior Pros Are Under Threat from AI ⚔️ The Latest Salesforce Data Theft
-  [Sat, 15 Aug 2026 08:24:09 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-08-17 17:00 för Matej Smerak
-  [Fri, 14 Aug 2026 18:04:55 +0000] anonymous@example.com: Jensen Huang, Founder and CEO, is popular in your network
-
-Deleting 19 messages...
-  moved to trash 10/19
-  moved to trash 19/19
-Purging 19 messages from Trash...
-Permanently deleted 19 messages.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 85 events to index.html
-[main 9576fe2] update 2026-08-29
- 1 file changed, 2 insertions(+), 2 deletions(-)
-[stderr]
-To https://github.com/smerakm/aikp12calendar.git
-   b0fac6f..9576fe2  main -&gt; main</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (3 run(s), 10 task(s))
-push: OK</pre>
       </details>
     </div>
   </section>
