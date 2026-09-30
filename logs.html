@@ -63,7 +63,124 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-09-29 08:05 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-09-30 08:14 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-09-30 10:05:00</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 82 unread, 241 from the last 12 days (249 unique candidates). Fetching headers...
+  fetched 10/249
+    ... 23 more progress lines ...
+  fetched 249/249
+229 messages to render. Fetching full content...
+  fetched 10/229
+    ... 21 more progress lines ...
+  fetched 229/229
+Categorizing 229 messages...
+Labeling and marking as read 178 messages...
+  processed 10/178
+    ... 16 more progress lines ...
+  processed 178/178
+Applied labels to 178/178, marked 178/178 as read.
+Rendering HTML page...
+Wrote 229 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/9] Private / Personal (49 messages)...
+    ok — 8 highlights (65876 in / 1833 out, 0 cached)
+  [2/9] School (1 messages)...
+    ok — 1 highlights (1694 in / 196 out, 1032 cached)
+  [3/9] Account &amp; Security (1 messages)...
+    ok — 1 highlights (3658 in / 403 out, 1032 cached)
+  [4/9] Finance (6 messages)...
+    ok — 4 highlights (2937 in / 793 out, 1032 cached)
+  [5/9] Family / Kids monitoring (6 messages)...
+    ok — 2 highlights (13996 in / 677 out, 1032 cached)
+  [6/9] Social (23 messages)...
+    ok — 8 highlights (78803 in / 5075 out, 1032 cached)
+  [7/9] Sport notifications (39 messages)...
+    ok — 8 highlights (31520 in / 1746 out, 1032 cached)
+  [8/9] Offers (55 messages)...
+    ok — 8 highlights (102478 in / 3907 out, 1032 cached)
+  [9/9] Newsletter (49 messages)...
+    ok — 8 highlights (132966 in / 4358 out, 1032 cached)
+Wrote 9 summarized sections to output/enhancedSummary.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 27 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/27
+  fetched 20/27
+  fetched 27/27
+  [Tue, 15 Sep 2026 15:23:04 +0200] anonymous@example.com: ⚫🟡 VI FYLLER SOLNAHALLEN – SSL-PREMIÄR PÅ LÖRDAG! 🟡⚫
+  [Tue, 15 Sep 2026 07:27:44 +0000] anonymous@example.com: SuperSpenn Tuesday and Wednesday!
+  [Tue, 15 Sep 2026 08:18:15 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Tue, 15 Sep 2026 20:50:15 +0000] anonymous@example.com: Something New at JustinGuitar: Meet Seth and Make It Sing!
+  [Tue, 15 Sep 2026 10:02:42 +0000] anonymous@example.com: 20% rabatt på allt från Zone⚡️
+  [Tue, 15 Sep 2026 16:04:55 +0000] anonymous@example.com: View Carmen Antinucci’s post and your next steps
+  [Tue, 15 Sep 2026 06:04:14 -0600] anonymous@example.com: TÄVLING: Vinn en gratis vecka! 🎉
+  [Tue, 15 Sep 2026 17:37:55 +0000] anonymous@example.com: View Carmen Antinucci’s post and your next steps
+  [Tue, 15 Sep 2026 17:03:24 +0000] anonymous@example.com: Allt till jakten 🐗
+  [Wed, 16 Sep 2026 06:38:46 +0000] anonymous@example.com: Hitta en ny favorit för aktiva dagar⚡
+  [Tue, 15 Sep 2026 19:14:08 +0000] anonymous@example.com: marek.smerak, here&#x27;s what&#x27;s coming soon to Netflix
+  [Tue, 15 Sep 2026 17:34:26 +0200] anonymous@example.com: Sätt nytt lösenord till Matej
+  [Tue, 15 Sep 2026 15:50:41 +0100] anonymous@example.com: Tonight’s the Night: Final Afterparty Tickets 🎉
+  [Tue, 15 Sep 2026 20:20:06 +0000] anonymous@example.com: Top tips to help you get more for your money
+  [Tue, 15 Sep 2026 14:22:13 +0000] anonymous@example.com: What&#x27;s new in Eurovision this September ✨
+  [Mon, 14 Sep 2026 11:01:14 +0000] anonymous@example.com: Nya deals, Moderskeppet och Cyberpunk TCG
+  [Mon, 14 Sep 2026 10:04:55 +0000] anonymous@example.com: 33 people viewed your profile
+  [Mon, 14 Sep 2026 17:45:50 +0000] anonymous@example.com: You have 1 new invitation
+  [Mon, 14 Sep 2026 18:06:55 +0000] anonymous@example.com: Zdenek Mengler - Koordinátor výstavy Děti ze srdce reacted to this post: Zůstal jsem jen koukat…
+  [Mon, 14 Sep 2026 17:32:50 +0000] anonymous@example.com: &quot;Hagalundskungens&quot; villa renoveras och öppnas
+  [Tue, 15 Sep 2026 10:59:55 +0200] anonymous@example.com: 72 Hours Only: Member Day Deals Are Live
+  [Wed, 16 Sep 2026 07:01:11 +0000] anonymous@example.com: 20% rabatt på mobiltillbehör
+  [Wed, 16 Sep 2026 07:13:00 +0000] anonymous@example.com: Kvällsmatch! Säkra ditt läktarstöd
+  [Tue, 15 Sep 2026 05:25:04 +0000] anonymous@example.com: Sugen på ett nytt projekt?
+  [Tue, 15 Sep 2026 12:55:59 +0000] anonymous@example.com: Kallelse Hockeyfritids: Hockeyfritids 2026-09-16 14:30 för Matej Smerak
+  [Mon, 14 Sep 2026 17:44:38 +0100] anonymous@example.com: Is Salesforce Being Disrupted by AI? 🦾 Prepare for Winter &#x27;27 Go-Live!
+  [Mon, 14 Sep 2026 12:14:35 +0000] anonymous@example.com: Just nu: Flygresor från 299:-.
+
+Deleting 27 messages...
+  moved to trash 10/27
+  moved to trash 20/27
+  moved to trash 27/27
+Purging 27 messages from Trash...
+Permanently deleted 27 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 108 events to index.html
+[main f2959df] update 2026-09-30
+ 1 file changed, 336 insertions(+), 3 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   f7a5c19..f2959df  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-09-29 10:05:01</h2>
     <div class="task">
@@ -88,6 +205,19 @@
         <pre>[stdout]
 Wrote 94 events to index.html
 No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 3 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (31 run(s), 123 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
@@ -2586,248 +2716,6 @@ No meaningful changes to index.html, nothing to commit.</pre>
         <pre>build: OK
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (6 run(s), 22 task(s))
 push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-08-31 10:05:00</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 87 unread, 263 from the last 12 days (265 unique candidates). Fetching headers...
-  fetched 10/265
-    ... 25 more progress lines ...
-  fetched 265/265
-224 messages to render. Fetching full content...
-  fetched 10/224
-    ... 21 more progress lines ...
-  fetched 224/224
-Categorizing 224 messages...
-Labeling and marking as read 182 messages...
-  processed 10/182
-    ... 17 more progress lines ...
-  processed 182/182
-Applied labels to 182/182, marked 182/182 as read.
-Rendering HTML page...
-Wrote 224 categorized messages to output/index.html</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 22 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
-Fetching headers for review...
-  fetched 10/22
-  fetched 20/22
-  fetched 22/22
-  [Sat, 15 Aug 2026 11:24:30 +0000] anonymous@example.com: Coming on Monday, 17 August... Cocomelon: The Melon Patch
-  [Sun, 16 Aug 2026 19:01:04 +0000] anonymous@example.com: ⏰ 3h kvar – rabatten försvinner ikväll!
-  [Mon, 17 Aug 2026 07:00:44 +0000] anonymous@example.com: Spara 50 % på alla skärmskydd
-  [Sun, 16 Aug 2026 09:16:29 +0000] anonymous@example.com: Månadens Erbjudande - Husqvarnas leksaker
-  [Sun, 16 Aug 2026 13:14:35 +0000] anonymous@example.com: Vinn ett exklusivt matchpaket till hemmamatchen mot GAIS!
-  [Sun, 16 Aug 2026 07:52:26 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
-  [Sun, 16 Aug 2026 11:10:30 +0000] anonymous@example.com: Check out this week’s top 10 films: Sweden
-  [Sun, 16 Aug 2026 11:02:49 +0200] anonymous@example.com: ✨Why We&#x27;re Highlighting These Products Right Now
-  [Mon, 17 Aug 2026 08:04:54 +0000] anonymous@example.com: Bohdan Kostenko and Akshaye Sharma want to join your network
-  [Sun, 16 Aug 2026 05:30:11 +0000] anonymous@example.com: Sista dagen på jubileet – vi ses i butiken!
-  [Sun, 16 Aug 2026 14:53:19 +0000] anonymous@example.com: Derbyseger!
-  [Sun, 16 Aug 2026 11:14:24 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-08-20 06:45 för Matej Smerak
-  [Sat, 15 Aug 2026 11:28:56 +0000] anonymous@example.com: The best places to be in September
-  [Sun, 16 Aug 2026 18:37:56 +0000] anonymous@example.com: You have 10+ new invitations
-  [Sun, 16 Aug 2026 16:34:57 +0100] anonymous@example.com:  We Added Another Dreamforce Lunch 👀
-  [Sat, 15 Aug 2026 15:07:51 +0100] anonymous@example.com: The Picklist ☕ Salesforce Professionals Leaving, The Ultimate Guide to Claude, and Winter ‘27 Prep
-  [Sat, 15 Aug 2026 18:37:56 +0000] anonymous@example.com: You have 10+ new invitations
-  [Mon, 17 Aug 2026 05:00:45 +0000] anonymous@example.com: Vi firar 40 år av fynd 💛
-  [Sun, 16 Aug 2026 08:39:54 +0200] anonymous@example.com: Den 23 augusti smyger vi igång AIK Innebandyskola!
-  [Sat, 15 Aug 2026 13:31:04 +0000] anonymous@example.com: ChatGPT v Chrome
-  [Sun, 16 Aug 2026 13:06:56 +0000] anonymous@example.com: Söndagsklipp - Upp till 60% rabatt! 👀
-  [Sun, 16 Aug 2026 03:02:30 -0600] anonymous@example.com: Har du hakat på trenden än? 🥾
-
-Deleting 22 messages...
-  moved to trash 10/22
-  moved to trash 20/22
-  moved to trash 22/22
-Purging 22 messages from Trash...
-Permanently deleted 22 messages.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 85 events to index.html
-No meaningful changes to index.html, nothing to commit.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (5 run(s), 18 task(s))
-push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-08-30 10:08:06</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge bad">FAILED (exit 1)</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-[stderr]
-Traceback (most recent call last):
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 83, in &lt;module&gt;
-    main()
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/main.py&quot;, line 24, in main
-    conn = imap_client.connect()
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 26, in connect
-    conn = imaplib.IMAP4_SSL(IMAP_HOST)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1324, in __init__
-    IMAP4.__init__(self, host, port, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 202, in __init__
-    self.open(host, port, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1337, in open
-    IMAP4.open(self, host, port, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 312, in open
-    self.sock = self._create_socket(timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1327, in _create_socket
-    sock = IMAP4._create_socket(self, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 302, in _create_socket
-    return socket.create_connection(address)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 822, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 953, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 8] nodename nor servname provided, or not known</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge bad">FAILED (exit 1)</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-[stderr]
-Traceback (most recent call last):
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/purge_old.py&quot;, line 86, in &lt;module&gt;
-    main()
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/purge_old.py&quot;, line 45, in main
-    conn = imap_client.connect()
-  File &quot;/Users/marek/LABS/01-projects/Email_Crawl/imap_client.py&quot;, line 26, in connect
-    conn = imaplib.IMAP4_SSL(IMAP_HOST)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1324, in __init__
-    IMAP4.__init__(self, host, port, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 202, in __init__
-    self.open(host, port, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1337, in open
-    IMAP4.open(self, host, port, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 312, in open
-    self.sock = self._create_socket(timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 1327, in _create_socket
-    sock = IMAP4._create_socket(self, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/imaplib.py&quot;, line 302, in _create_socket
-    return socket.create_connection(address)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 822, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 953, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 8] nodename nor servname provided, or not known</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge bad">FAILED (exit 1)</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stderr]
-Traceback (most recent call last):
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1346, in do_open
-    h.request(req.get_method(), req.selector, req.data, headers,
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1257, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1303, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1252, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1012, in _send_output
-    self.send(msg)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 952, in send
-    self.connect()
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 1419, in connect
-    super().connect()
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/client.py&quot;, line 923, in connect
-    self.sock = self._create_connection(
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 822, in create_connection
-    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socket.py&quot;, line 953, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 8] nodename nor servname provided, or not known
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/Users/marek/LABS/01-projects/AIK_calendar_subs/generate.py&quot;, line 438, in &lt;module&gt;
-    main()
-  File &quot;/Users/marek/LABS/01-projects/AIK_calendar_subs/generate.py&quot;, line 425, in main
-    raw = fetch_ics(url)
-  File &quot;/Users/marek/LABS/01-projects/AIK_calendar_subs/generate.py&quot;, line 47, in fetch_ics
-    with urllib.request.urlopen(req, timeout=30) as resp:
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 214, in urlopen
-    return opener.open(url, data, timeout)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 517, in open
-    response = self._open(req, data)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 534, in _open
-    result = self._call_chain(self.handle_open, protocol, protocol +
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 494, in _call_chain
-    result = func(*args)
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1389, in https_open
-    return self.do_open(http.client.HTTPSConnection, req,
-  File &quot;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/urllib/request.py&quot;, line 1349, in do_open
-    raise URLError(err)
-urllib.error.URLError: &lt;urlopen error [Errno 8] nodename nor servname provided, or not known&gt;</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge bad">FAILED (push)</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (4 run(s), 14 task(s))
-push: FAILED
-fatal: unable to access &#x27;https://github.com/smerakm/myownjarvis/&#x27;: Could not resolve host: github.com</pre>
       </details>
     </div>
   </section>
