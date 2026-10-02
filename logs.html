@@ -63,7 +63,123 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-10-01 08:05 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-10-02 08:15 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-10-02 10:05:04</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 105 unread, 270 from the last 12 days (281 unique candidates). Fetching headers...
+  fetched 10/281
+    ... 27 more progress lines ...
+  fetched 281/281
+263 messages to render. Fetching full content...
+  fetched 10/263
+    ... 25 more progress lines ...
+  fetched 263/263
+Categorizing 263 messages...
+Labeling and marking as read 192 messages...
+  processed 10/192
+    ... 18 more progress lines ...
+  processed 192/192
+Applied labels to 192/192, marked 192/192 as read.
+Rendering HTML page...
+Wrote 263 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/9] Private / Personal (67 messages)...
+    ok — 8 highlights (80483 in / 1742 out, 0 cached)
+  [2/9] School (1 messages)...
+    ok — 1 highlights (1697 in / 207 out, 1032 cached)
+  [3/9] Account &amp; Security (3 messages)...
+    ok — 2 highlights (4589 in / 606 out, 1032 cached)
+  [4/9] Finance (8 messages)...
+    ok — 4 highlights (3475 in / 799 out, 1032 cached)
+  [5/9] Family / Kids monitoring (6 messages)...
+    ok — 2 highlights (13998 in / 537 out, 1032 cached)
+  [6/9] Social (23 messages)...
+    ok — 8 highlights (76181 in / 5301 out, 1032 cached)
+  [7/9] Sport notifications (42 messages)...
+    ok — 8 highlights (30106 in / 2125 out, 1032 cached)
+  [8/9] Offers (62 messages)...
+    ok — 8 highlights (112169 in / 3449 out, 1032 cached)
+  [9/9] Newsletter (51 messages)...
+    ok — 8 highlights (138920 in / 4138 out, 1032 cached)
+Wrote 9 summarized sections to output/enhancedSummary.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 30 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/30
+  fetched 20/30
+  fetched 30/30
+  [Wed, 16 Sep 2026 12:49:37 +0000] anonymous@example.com: Anthrion teammates have a Zip invite waiting for you. 📬
+  [Wed, 16 Sep 2026 18:04:54 +0000] anonymous@example.com: Nyjil Joshi PMP, FDE, CCA-F reacted to this post: Apex Log MCP 2.0.1 is out 🎉…
+  [Thu, 17 Sep 2026 08:16:50 +0000] anonymous@example.com: Kallelse Team 13 U14: Föräldramöte 2026-09-22 19:30 för Matej Smerak
+  [Wed, 16 Sep 2026 14:22:41 +0000] anonymous@example.com: New on Disney+
+  [Wed, 16 Sep 2026 03:20:51 -0600] anonymous@example.com: Dags för en campinghelg?🍂
+  [Thu, 17 Sep 2026 16:32:47 +0200] anonymous@example.com: Nyheter och tips - #6 2026
+  [Wed, 16 Sep 2026 17:15:15 +0000] anonymous@example.com: Höstens erbjudanden är här🔥
+  [Fri, 18 Sep 2026 08:13:02 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Wed, 16 Sep 2026 19:13:12 +0000] anonymous@example.com: Kom Hammarby närmare med Bajen+
+  [Wed, 16 Sep 2026 12:06:18 +0000] anonymous@example.com: Know where your order is, always
+  [Wed, 16 Sep 2026 12:28:06 +0200] anonymous@example.com: ⚫🟡 Uppdatering kring matchen på lördag 🟡⚫
+  [Wed, 16 Sep 2026 17:37:55 +0000] anonymous@example.com: You have 1 new invitation
+  [Thu, 17 Sep 2026 16:04:54 +0000] anonymous@example.com: View Carmen Antinucci’s post and your next steps
+  [Fri, 18 Sep 2026 05:24:07 +0000] anonymous@example.com: 1800-talstorpet gör succé
+  [Wed, 16 Sep 2026 16:28:09 +0100] anonymous@example.com: The Biggest Dreamforce Takeaways So Far 🎈
+  [Wed, 16 Sep 2026 11:36:31 +0000] anonymous@example.com: Solna - Segeltorp: Sekretariatet
+  [Thu, 17 Sep 2026 17:37:54 +0000] anonymous@example.com: You have 1 new invitation
+  [Thu, 17 Sep 2026 10:07:42 -0600] anonymous@example.com: 80 timmars jubileumsrea: först till kvarn
+  [Fri, 18 Sep 2026 07:09:33 +0000] anonymous@example.com: Allt du behöver för höstvädret 🍁
+  [Wed, 16 Sep 2026 17:05:20 +0000] anonymous@example.com: What&#x27;s playing next, marek.smerak?
+  [Thu, 17 Sep 2026 17:02:10 +0100] anonymous@example.com: Make Salesforce Agents Work For Your Developers
+  [Thu, 17 Sep 2026 11:21:28 -0600] anonymous@example.com: 80 timmars jubileumsrea: först till kvarn
+  [Thu, 17 Sep 2026 17:57:40 +0100] anonymous@example.com: New Well-Architected Framework Revealed 💫 Benioff&#x27;s Take on AI Slowdown
+  [Wed, 16 Sep 2026 09:58:15 +0000] anonymous@example.com: Bostadsmarknaden under augusti
+  [Thu, 17 Sep 2026 13:15:56 +0000] anonymous@example.com: Just nu: Kampanj på Mammotion 🔥
+  [Wed, 16 Sep 2026 14:02:04 +0000] anonymous@example.com: Kallelse Hockeyfritids: Hockeyfritids 2026-09-23 14:30 för Matej Smerak
+  [Thu, 17 Sep 2026 13:45:09 +0000] anonymous@example.com: I helgen kan du fynda Logitech!
+  [Thu, 17 Sep 2026 12:09:05 +0200] anonymous@example.com: IFA 2026: Meet Creality&#x27;s Latest Innovations
+  [Fri, 18 Sep 2026 05:47:02 +0000] anonymous@example.com: 🔥 EN HEL HELG. BARA INNEBANDY.
+  [Wed, 16 Sep 2026 17:00:35 +0000] anonymous@example.com: Ras för Liberalerna – sämsta valet någonsin i Solna
+
+Deleting 30 messages...
+  moved to trash 10/30
+  moved to trash 20/30
+  moved to trash 30/30
+Purging 30 messages from Trash...
+Permanently deleted 30 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 108 events to index.html
+No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-10-01 10:05:00</h2>
     <div class="task">
@@ -88,6 +204,19 @@
         <pre>[stdout]
 Wrote 108 events to index.html
 No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 5 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (31 run(s), 123 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
@@ -2575,186 +2704,6 @@ To https://github.com/smerakm/aikp12calendar.git
         <summary>output</summary>
         <pre>build: OK
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (8 run(s), 30 task(s))
-push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-09-02 10:05:06</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 58 unread, 274 from the last 12 days (278 unique candidates). Fetching headers...
-  fetched 10/278
-    ... 26 more progress lines ...
-  fetched 278/278
-232 messages to render. Fetching full content...
-  fetched 10/232
-    ... 22 more progress lines ...
-  fetched 232/232
-Categorizing 232 messages...
-Labeling and marking as read 190 messages...
-  processed 10/190
-    ... 17 more progress lines ...
-  processed 190/190
-Applied labels to 190/190, marked 190/190 as read.
-Rendering HTML page...
-Wrote 232 categorized messages to output/index.html</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 12 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
-Fetching headers for review...
-  fetched 10/12
-  fetched 12/12
-  [Wed, 19 Aug 2026 08:12:47 +0200] anonymous@example.com: 3 nya bostäder i din bevakning på Booli 🎉
-  [Tue, 18 Aug 2026 17:36:27 +0100] anonymous@example.com:  The Salesforce Ben Afterparty Just Got Louder 🔥
-  [Tue, 18 Aug 2026 11:00:23 +0200] anonymous@example.com: WEBINAR REMINDER: Upgrade Calmly your Dynamics NAV to Business Central
-  [Tue, 18 Aug 2026 11:34:29 +0000] anonymous@example.com: Coming on Thursday, 20 August... Blood Sacrifice
-  [Tue, 18 Aug 2026 14:46:35 +0000] anonymous@example.com: EuroForce teammates have a Zip invite waiting for you. 📬
-  [Tue, 18 Aug 2026 12:02:36 +0200] anonymous@example.com: AIK Innebandy Ledarträff - Inför
-  [Tue, 18 Aug 2026 19:00:11 +0000] anonymous@example.com: Kallelse Motionslag Herr-Syd: Innebandy 2026-08-23 21:00 för Marek Smerak
-  [Tue, 18 Aug 2026 08:46:06 +0000] anonymous@example.com: 20% rabatt på ALLT från Unihoc 🏑
-  [Tue, 18 Aug 2026 06:11:09 -0600] anonymous@example.com: Säkra höstens resor fr. 499:-
-  [Tue, 18 Aug 2026 13:09:02 +0000] anonymous@example.com: Garage på köpet värde 2499 kr! 🤖
-  [Tue, 18 Aug 2026 05:24:37 -0600] anonymous@example.com: Säkra höstens resor fr. 499:-
-  [Wed, 19 Aug 2026 06:31:13 +0000] anonymous@example.com: Spara stort idag!
-
-Deleting 12 messages...
-  moved to trash 10/12
-  moved to trash 12/12
-Purging 12 messages from Trash...
-Permanently deleted 12 messages.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 83 events to index.html
-[main 145f369] update 2026-09-02
- 1 file changed, 24 insertions(+), 69 deletions(-)
-[stderr]
-To https://github.com/smerakm/aikp12calendar.git
-   9576fe2..145f369  main -&gt; main</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (7 run(s), 26 task(s))
-push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-09-01 10:05:05</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 51 unread, 270 from the last 12 days (273 unique candidates). Fetching headers...
-  fetched 10/273
-    ... 26 more progress lines ...
-  fetched 273/273
-228 messages to render. Fetching full content...
-  fetched 10/228
-    ... 21 more progress lines ...
-  fetched 228/228
-Categorizing 228 messages...
-Labeling and marking as read 189 messages...
-  processed 10/189
-    ... 17 more progress lines ...
-  processed 189/189
-Applied labels to 189/189, marked 189/189 as read.
-Rendering HTML page...
-Wrote 228 categorized messages to output/index.html</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 14 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
-Fetching headers for review...
-  fetched 10/14
-  fetched 14/14
-  [Mon, 17 Aug 2026 17:37:06 +0100] anonymous@example.com: What’s Coming Ahead of Dreamforce? 🌆 Could Salesforce Become ‘SalesforceSlack’?
-  [Tue, 18 Aug 2026 06:47:34 +0000] anonymous@example.com: 48 hours of SuperSpenn on flights with Norwegian!
-  [Mon, 17 Aug 2026 10:04:55 +0000] anonymous@example.com: 87 people viewed your profile
-  [Mon, 17 Aug 2026 12:48:43 +0000] anonymous@example.com: Biljettsläpp! Säkra din plats på Skyttan
-  [Mon, 17 Aug 2026 20:40:07 +0000] anonymous@example.com: What to watch after Resident Alien
-  [Mon, 17 Aug 2026 20:31:30 +0000] anonymous@example.com: Tarjei Bryn - Co-Founder reacted to this post: A quick update from my end:…
-  [Mon, 17 Aug 2026 17:00:23 +0000] anonymous@example.com: Upprepat sabotage mot betande baggar: &quot;Taskigt&quot;
-  [Mon, 17 Aug 2026 18:04:56 +0000] anonymous@example.com: View Amit Datta’s post and your next steps
-  [Mon, 17 Aug 2026 11:11:10 +0000] anonymous@example.com: Något för öronen, soffan och setupen
-  [Mon, 17 Aug 2026 14:45:20 +0000] anonymous@example.com: Är du redo för årets jaktmässa?💥
-  [Mon, 17 Aug 2026 12:12:42 +0000] anonymous@example.com: Höstrean startar nu! 🍂
-  [Tue, 18 Aug 2026 08:01:13 +0000] anonymous@example.com: Drömmen om en kolonistuga 🪴
-  [Mon, 17 Aug 2026 18:37:56 +0000] anonymous@example.com: You have 10+ new invitations
-  [Tue, 18 Aug 2026 07:56:38 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
-
-Deleting 14 messages...
-  moved to trash 10/14
-  moved to trash 14/14
-Purging 14 messages from Trash...
-Permanently deleted 14 messages.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 85 events to index.html
-No meaningful changes to index.html, nothing to commit.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (6 run(s), 22 task(s))
 push: OK</pre>
       </details>
     </div>
