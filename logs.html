@@ -63,7 +63,34 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-10-24 16:12 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-10-25 09:22 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-10-25 10:22:02</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge skip">SKIPPED (not scheduled today)</span>
+      </div>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge skip">SKIPPED (not scheduled today)</span>
+      </div>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 108 events to index.html
+No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-10-24 10:20:39</h2>
     <div class="task">
@@ -93,6 +120,19 @@ Wrote 108 events to index.html
 To https://github.com/smerakm/aikp12calendar.git
  ! [remote rejected] main -&gt; main (cannot lock ref &#x27;refs/heads/main&#x27;: is at 66d1b062d1fe8af5b5130c6f00d245f2cbd319ef but expected ef85d9e0c054d6542ed6b88b67437100715c12e4)
 error: failed to push some refs to &#x27;https://github.com/smerakm/aikp12calendar.git&#x27;</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 29 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
@@ -2535,49 +2575,6 @@ No meaningful changes to index.html, nothing to commit.</pre>
         <pre>build: OK
 ignored 1 run(s) older than 30 days
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
-push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-09-25 10:05:01</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge skip">SKIPPED (not scheduled today)</span>
-      </div>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge skip">SKIPPED (not scheduled today)</span>
-      </div>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 93 events to index.html
-[main ebc79be] update 2026-09-25
- 1 file changed, 5 insertions(+), 5 deletions(-)
-[stderr]
-To https://github.com/smerakm/aikp12calendar.git
-   47428e2..ebc79be  main -&gt; main</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 118 task(s))
 push: OK</pre>
       </details>
     </div>
