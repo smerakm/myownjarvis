@@ -63,7 +63,263 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-10-25 09:22 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-10-26 09:17 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-10-26 10:05:01</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 192 unread, 199 from the last 9 days (255 unique candidates). Fetching headers...
+  fetched 10/255
+    ... 24 more progress lines ...
+  fetched 255/255
+236 messages to render. Fetching full content...
+  fetched 10/236
+    ... 22 more progress lines ...
+  fetched 236/236
+Categorizing 236 messages...
+Labeling and marking as read 178 messages...
+  processed 10/178
+    ... 16 more progress lines ...
+  processed 178/178
+Applied labels to 178/178, marked 178/178 as read.
+Rendering HTML page...
+Wrote 236 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/8] Private / Personal (51 messages)...
+    ok — 8 highlights (58928 in / 1850 out, 0 cached)
+  [2/8] Account &amp; Security (7 messages)...
+    ok — 6 highlights (9801 in / 1586 out, 1032 cached)
+  [3/8] Finance (8 messages)...
+    ok — 6 highlights (4155 in / 1077 out, 1032 cached)
+  [4/8] Family / Kids monitoring (4 messages)...
+    ok — 2 highlights (8321 in / 655 out, 1032 cached)
+  [5/8] Social (22 messages)...
+    ok — 6 highlights (66239 in / 3294 out, 1032 cached)
+  [6/8] Sport notifications (33 messages)...
+    ok — 8 highlights (31243 in / 2069 out, 1032 cached)
+  [7/8] Offers (58 messages)...
+    ok — 8 highlights (111926 in / 3293 out, 1032 cached)
+  [8/8] Newsletter (53 messages)...
+    ok — 8 highlights (129855 in / 5604 out, 1032 cached)
+Wrote 8 summarized sections to output/enhancedSummary.html</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 170 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/170
+    ... 15 more progress lines ...
+  fetched 170/170
+  [Thu, 08 Oct 2026 06:11:45 +0000] anonymous@example.com: Till dig som ”bara” är vårdnadshavare eller mormor eller granne: Välkommen till Ritorps största äventyr på 15 år!
+  [Sat, 03 Oct 2026 09:31:24 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-10-10 16:00 för Matej Smerak
+  [Fri, 02 Oct 2026 18:30:51 +0200] anonymous@example.com: Påminnelse: Hjälp oss bli bättre!
+  [Sat, 03 Oct 2026 12:43:41 +0000] anonymous@example.com: Flanellskjortor för endast 149 kr/st👀
+  [Thu, 08 Oct 2026 15:51:06 +0200] anonymous@example.com: Fredrik Werleigh har svarat i forumet...
+  [Fri, 09 Oct 2026 18:04:56 +0000] anonymous@example.com: View Gianluca Tessitore’s post and your next steps
+  [Sat, 10 Oct 2026 08:07:49 +0000] anonymous@example.com: Weekly preview: Liga i Evropa jsou zpět!
+  [Mon, 05 Oct 2026 15:00:28 +0000] anonymous@example.com: Dags att tycka till om nya Ulriksdal
+  [Fri, 02 Oct 2026 16:00:13 +0000] anonymous@example.com: Arbetsgrupper T13
+  [Thu, 08 Oct 2026 09:54:02 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Mon, 05 Oct 2026 10:46:42 +0200] anonymous@example.com: Mia har tagits bort som ledare i Ledarsidan
+  [Wed, 07 Oct 2026 15:17:23 +0000] anonymous@example.com: Tre dagar kvar till allsvensk omstart!
+  [Wed, 07 Oct 2026 07:35:57 -0600] anonymous@example.com: Flyg från 549:-
+  [Fri, 02 Oct 2026 14:04:27 +0000] anonymous@example.com: SSL i full fart - plus massor av matcher i Allsvenskan!
+  [Sun, 04 Oct 2026 07:35:43 +0000] anonymous@example.com: Vstupenky na Slovácko
+  [Sat, 03 Oct 2026 11:46:30 +0200] anonymous@example.com: Lisa Sjöberg har svarat i forumet...
+  [Fri, 02 Oct 2026 15:30:32 +0000] anonymous@example.com: Storslam för Solna i riksdagen
+  [Mon, 05 Oct 2026 12:03:06 +0200] anonymous@example.com: Sermoon P1S: Built for Every Environment (Save €200 + Free Gift)
+  [Fri, 09 Oct 2026 09:00:10 +0000] anonymous@example.com: Nytt i sortimentet, åter i lager och riktigt bra deals!
+  [Sat, 10 Oct 2026 01:06:39 +0000] anonymous@example.com: A few things Justin thought you&#x27;d enjoy
+  [Fri, 02 Oct 2026 16:49:02 +0000] anonymous@example.com: marek.smerak, we’ve just added a series you might like
+  [Wed, 07 Oct 2026 12:13:29 +0000] anonymous@example.com: Flyg från 349 kr till sol och värme
+  [Thu, 08 Oct 2026 19:48:51 +0000] anonymous@example.com: This week on AI kruh: October 1 - October 8, 2026
+  [Sat, 10 Oct 2026 18:37:56 +0000] anonymous@example.com: Mattias Nordin commented on Julius Thimm’s post: Awesome. Lovable is…
+  [Wed, 07 Oct 2026 17:32:13 +0000] anonymous@example.com: Solnas styre klart – här är politikernas löften
+  [Fri, 02 Oct 2026 13:35:00 -0600] anonymous@example.com: Winter &#x27;27 Release 1 Week Notification
+  [Fri, 09 Oct 2026 14:00:49 +0000] anonymous@example.com: Ovanligt många unga politiker i Solna
+  [Wed, 07 Oct 2026 21:49:05 +0000] anonymous@example.com: Vineet Chhabra - Principal CRM Architect and Solution Advisor reacted to this post: Enjoyed Spirit of Wipro Run…
+  [Fri, 02 Oct 2026 22:19:25 +0000] anonymous@example.com: New lesson: Sonnet by The Verve
+  [Sat, 03 Oct 2026 13:42:38 +0200] anonymous@example.com: Patrick Fjällborg har svarat i forumet...
+  [Wed, 07 Oct 2026 18:44:56 +0200] anonymous@example.com: Bekräftelse höstlovscamp.
+  [Mon, 05 Oct 2026 19:04:10 +0000] anonymous@example.com: You appeared in 11 searches this week
+  [Tue, 06 Oct 2026 14:33:42 +0200] anonymous@example.com: Få kostnadsfri personlig karriärvägledning!
+  [Tue, 06 Oct 2026 18:37:55 +0000] anonymous@example.com: Milco Österholm commented on Forefront’s post: Otroligt sorgligt. Mina tankar…
+  [Sat, 03 Oct 2026 14:42:50 +0000] anonymous@example.com: Wellness wisdom... from an owl? 🦉
+  [Wed, 07 Oct 2026 16:42:50 +0100] anonymous@example.com: Salesforce&#x27;s AI Pricing = Bad Architecture? 🏗️ Claude Use Cases for Admins
+  [Thu, 08 Oct 2026 06:01:52 -0600] anonymous@example.com: Husbilspasset 2027 är här! ⭐
+  [Sun, 04 Oct 2026 17:12:04 +0200] anonymous@example.com: Ikväll är det Bingolotto – häng med!
+  [Thu, 08 Oct 2026 15:54:36 +0200] anonymous@example.com: Lisa Sjöberg har svarat i forumet...
+  [Fri, 02 Oct 2026 19:36:07 +0200] anonymous@example.com: Välkommen till söndagens Bingolotto
+  [Wed, 07 Oct 2026 07:46:26 +0000] anonymous@example.com: What to watch this week
+  [Sun, 11 Oct 2026 18:04:57 +0000] anonymous@example.com: View Francis Pindar’s post and your next steps
+  [Thu, 08 Oct 2026 09:18:01 +0000] anonymous@example.com: Co všechno děláme, ale v nabídce to není?
+  [Sat, 10 Oct 2026 11:06:05 +0000] anonymous@example.com: Populära Motorsågar &amp; Röjsågar just nu 👀
+  [Fri, 09 Oct 2026 18:54:14 +0000] anonymous@example.com: Jens Rimmen Bruus commented on Martin Voetmann’s post: Thank you for an…
+  [Fri, 09 Oct 2026 10:03:47 +0200] anonymous@example.com: 🚀 Meet the NEW HALOT-X1 Neo — From €229
+  [Fri, 09 Oct 2026 17:15:57 +0000] anonymous@example.com: Månadens Erbjudande - Husqvarna Lövblås
+  [Sat, 10 Oct 2026 07:11:26 +0000] anonymous@example.com: Allsvenskan är äntligen tillbaka!
+  [Sun, 11 Oct 2026 20:43:16 +0000] anonymous@example.com: marek.smerak, here&#x27;s what&#x27;s coming soon to Netflix
+  [Sat, 03 Oct 2026 05:46:21 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys 2026-10-08 17:30 för Matej Smerak
+  [Sat, 10 Oct 2026 09:02:54 -0600] anonymous@example.com: Inga planer för höstlovet? 🎃
+  [Fri, 02 Oct 2026 03:02:31 -0600] anonymous@example.com: Sommaren 2027 väntar! ☀️
+  [Fri, 09 Oct 2026 18:16:35 +0000] anonymous@example.com: Your guide to Claude Managed Agents
+  [Sun, 11 Oct 2026 15:33:02 +0100] anonymous@example.com: The Picklist ☕ Winter ‘27 Is Live, Salesforce Career Gaps, and The Big AI Adoption Problem
+  [Tue, 06 Oct 2026 06:55:40 +0200] anonymous@example.com: Stina Ingesson-Hammarberg har svarat i forumet...
+  [Mon, 05 Oct 2026 06:46:39 +0000] anonymous@example.com: Produktnyheter i oktober!
+  [Sat, 03 Oct 2026 16:10:04 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-10-09 18:00 för Matej Smerak
+  [Thu, 08 Oct 2026 16:07:40 +0200] anonymous@example.com: Patrick Fjällborg har svarat i forumet...
+  [Sun, 11 Oct 2026 13:45:13 +0200] anonymous@example.com: .
+  [Thu, 08 Oct 2026 18:12:31 +0000] anonymous@example.com: Nobody Wants This is peak rom-com
+  [Fri, 02 Oct 2026 09:29:10 +0000] anonymous@example.com: En ovanligt välfylld gamingvecka!
+  [Thu, 08 Oct 2026 10:03:04 +0200] anonymous@example.com: 👻 Print Your Halloween – up to 45% off
+  [Fri, 09 Oct 2026 20:36:07 +0000] anonymous@example.com: David Wiklund - Salesforce Architect for Nordics reacted to this post: After an incredible journey…
+  [Fri, 09 Oct 2026 14:09:28 +0000] anonymous@example.com: SM-finalrepris, heta derbyn &amp; fullspäckad helg i SSL!
+  [Wed, 07 Oct 2026 18:56:31 +0000] anonymous@example.com: You appeared in 25 searches this week
+  [Fri, 09 Oct 2026 19:02:34 +0200] anonymous@example.com: Lotta hälsar dig välkommen på söndag
+  [Tue, 06 Oct 2026 17:03:00 +0000] anonymous@example.com: Tävling, produkt-release och nyheter
+  [Sun, 04 Oct 2026 09:05:21 +0200] anonymous@example.com: 🎁Gift! 6% discount on your next order! 
+  [Fri, 02 Oct 2026 11:09:14 -0600] anonymous@example.com: Surfa säkrare – aktivera ditt kostnadsfria skydd.
+  [Tue, 06 Oct 2026 07:41:18 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Thu, 08 Oct 2026 07:31:56 +0200] anonymous@example.com: Inbjudan från Solna gymnasium!
+  [Sun, 04 Oct 2026 17:37:00 +0000] anonymous@example.com: Domare 11/10
+  [Thu, 08 Oct 2026 14:29:36 +0200] anonymous@example.com: Fyll hösten med kunskap och inspiration!
+  [Fri, 09 Oct 2026 08:18:55 +0000] anonymous@example.com: Vi närmar oss 27 000 sålda till omstarten
+  [Fri, 09 Oct 2026 16:34:41 +0100] anonymous@example.com: Using AI to Prevent Scope Creep 👾 Is Adobe the First SaaSpocalypse Victim?
+  [Sat, 03 Oct 2026 00:04:54 +0000] anonymous@example.com: George Arshakian - Managing Architect reacted to this post: In the AI era, the winners…
+  [Tue, 06 Oct 2026 08:46:35 +0000] anonymous@example.com: Get started with Claude Managed Agents
+  [Fri, 09 Oct 2026 07:41:34 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Tue, 06 Oct 2026 10:28:46 +0200] anonymous@example.com: Ny värdeindikation för Gyllene Hästens Torg 7
+  [Mon, 05 Oct 2026 14:11:34 +0000] anonymous@example.com: marek.smerak, we’ve just added a film you might like
+  [Fri, 02 Oct 2026 17:40:33 +0000] anonymous@example.com: Dubbla matcher i helgen – seriemöte på Kanalplan och träningsmatch för herrarna
+  [Sat, 03 Oct 2026 05:46:07 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys - styrka 2026-10-07 18:00 för Matej Smerak
+  [Sun, 11 Oct 2026 12:04:22 +0200] anonymous@example.com: ⏳ Only 24 hours left: Sermoon P1S at the early-bird price!
+  [Sat, 03 Oct 2026 15:03:26 +0200] anonymous@example.com: Marek, only 7 days left – get up to SEK 850 back! ⏳
+  [Mon, 12 Oct 2026 08:04:56 +0000] anonymous@example.com: Michal Karmasín wants to join your network
+  [Tue, 06 Oct 2026 18:00:29 +0000] anonymous@example.com: Kallelse Motionslag Herr-Syd: Innebandy 2026-10-11 20:00 för Marek Smerak
+  [Sat, 10 Oct 2026 08:57:18 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-10-17 16:00 för Matej Smerak
+  [Sat, 03 Oct 2026 14:20:26 +0000] anonymous@example.com: We’ve added something you might like...
+  [Tue, 06 Oct 2026 09:44:17 +0000] anonymous@example.com: 20% rabatt på Fat Pipe 🔥
+  [Sat, 10 Oct 2026 08:55:59 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-10-12 18:00 för Matej Smerak
+  [Wed, 07 Oct 2026 07:25:03 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Fri, 09 Oct 2026 06:31:14 +0000] anonymous@example.com: Starlink är här
+  [Wed, 07 Oct 2026 12:34:32 +0000] anonymous@example.com: Sista chansen: Kampanj på Mammotion 💥
+  [Tue, 06 Oct 2026 08:51:57 +0200] anonymous@example.com: Patrick Fjällborg har svarat i forumet...
+  [Sat, 10 Oct 2026 08:00:35 +0000] anonymous@example.com: Ready to get high? 👀
+  [Fri, 09 Oct 2026 13:10:20 +0000] anonymous@example.com: Vstupenky na AFC Bournemouth
+  [Fri, 09 Oct 2026 15:15:19 +0200] anonymous@example.com: Kom och se landslagshockey!
+  [Tue, 06 Oct 2026 15:43:27 +0200] anonymous@example.com: Välkommen på ledarträff
+  [Sun, 04 Oct 2026 07:11:29 +0000] anonymous@example.com: Nyinkommet just nu 👀
+  [Wed, 07 Oct 2026 07:57:11 +0000] anonymous@example.com: Titta in i tre funkispärlor
+  [Fri, 09 Oct 2026 07:51:13 +0000] anonymous@example.com: Titta in i 120-åriga jugendvillan
+  [Wed, 07 Oct 2026 00:35:58 -0700] anonymous@example.com: Marek, thanks for being a valued member
+  [Mon, 12 Oct 2026 05:15:45 +0000] anonymous@example.com: Vardagshjältar till riktigt låga priser!
+  [Tue, 06 Oct 2026 09:35:59 +0200] anonymous@example.com: Populärt just nu på BenifexDeals
+  [Sun, 11 Oct 2026 18:40:48 +0000] anonymous@example.com: Diana Brennerová reposted Jan Dvořák&#x27;s post: 🤸‍♂️ KRÁSNÁ PRÁCE 🤸‍♀️ 
+pro…
+  [Fri, 02 Oct 2026 12:04:30 +0200] anonymous@example.com: 👻 Get ready for Halloween – up to 45% off
+  [Wed, 07 Oct 2026 07:08:55 +0000] anonymous@example.com: Ut och cykla i höst 🚲
+  [Mon, 05 Oct 2026 17:13:39 +0100] anonymous@example.com: Can You Survive a Salesforce Career Break? ⌛ 10 Winter ’27 Features Worth Sharing
+  [Sat, 03 Oct 2026 09:08:19 +0000] anonymous@example.com: Välkommen på förfest!
+  [Sat, 10 Oct 2026 04:45:31 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-10-15 06:45 för Matej Smerak
+  [Mon, 05 Oct 2026 11:00:34 +0000] anonymous@example.com: Två nya kampanjer har landat!
+  [Sat, 03 Oct 2026 01:10:34 +0000] anonymous@example.com: This week in Claude Code: build your own mods, a wrap-up allowance, and more
+  [Wed, 07 Oct 2026 07:25:28 -0600] anonymous@example.com: Flyg från 549:-
+  [Sun, 11 Oct 2026 16:51:38 +0200] anonymous@example.com: Har du din bingolott till i kväll?
+  [Mon, 05 Oct 2026 08:54:02 +0000] anonymous@example.com: Kallelse Hockeyfritids: Hockeyfritids 2026-10-07 15:00 för Matej Smerak
+  [Sun, 11 Oct 2026 16:36:56 +0000] anonymous@example.com: Allt för jakten! 💥
+  [Wed, 07 Oct 2026 03:04:21 -0600] anonymous@example.com: Redo för höstcamping?🍁
+  [Fri, 09 Oct 2026 22:04:55 +0000] anonymous@example.com: Bjarne Stroustrup, Professor, is popular in your network
+  [Tue, 06 Oct 2026 10:04:46 -0600] anonymous@example.com: Tillsammans skapar vi Stora Dagar 💛
+  [Mon, 05 Oct 2026 17:23:04 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys - styrka EXTRA TILLFÄLLE MED T12 2026-10-06 17:00 för Matej Smerak
+  [Mon, 05 Oct 2026 14:32:07 +0000] anonymous@example.com: Bli belönad för ditt engagemang - skaffa Wimt!
+  [Tue, 06 Oct 2026 09:00:55 +0000] anonymous@example.com: Riktigt bra Sonos-deals i 48 h!
+  [Sun, 04 Oct 2026 15:03:21 +0100] anonymous@example.com: The Picklist ☕ Should We Regulate AI? Plus Benioff’s Strange New Suit and a Salesforce Career Audit
+  [Thu, 08 Oct 2026 18:55:58 +0000] anonymous@example.com: Revathy Nair and Bharat Pareek reacted to a post: Hi All, 
+Infosys is hiring…
+  [Sun, 04 Oct 2026 20:50:17 +0200] anonymous@example.com: Höstlovscamp AIK Endast 13 platser kvar. Målvakter sökes.
+  [Sun, 11 Oct 2026 09:04:00 +0000] anonymous@example.com: Slutar snart – 20 % på allt från Fat Pipe
+  [Mon, 05 Oct 2026 10:04:54 +0000] anonymous@example.com: 36 people viewed your profile
+  [Tue, 06 Oct 2026 11:56:37 +0200] anonymous@example.com: Vinterrabatt &amp; mässpepp!
+  [Sat, 10 Oct 2026 08:56:15 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-10-13 20:00 för Matej Smerak
+  [Sat, 03 Oct 2026 05:35:41 +0000] anonymous@example.com: Kallelse Team 13 U14: Träning 2026-10-05 18:00 för Matej Smerak
+  [Fri, 02 Oct 2026 23:06:40 +0000] anonymous@example.com: Travel news you need to know, from new openings to incredible cruises
+  [Sun, 04 Oct 2026 20:29:45 +0000] anonymous@example.com: Folder shared with you: ‘matches’
+  [Tue, 06 Oct 2026 10:02:55 +0200] anonymous@example.com: ⏰Fresh Deals: Save Up to 50% on Your Next Project
+  [Sat, 03 Oct 2026 17:25:52 +0000] anonymous@example.com: 15 år av exil är över – nu bygger vi Solnas skönaste 🧡🖤 Game Crew!
+  [Tue, 06 Oct 2026 16:32:22 +0100] anonymous@example.com: The AppExchange Battle Starts October 22 ⚡
+  [Sun, 04 Oct 2026 12:03:03 -0600] anonymous@example.com: Res från polcirkeln till Alperna...
+  [Wed, 07 Oct 2026 17:04:03 +0000] anonymous@example.com: 1792 12 Year Old - &#x27;World&#x27;s Best Bourbon&#x27;
+  [Tue, 06 Oct 2026 09:13:02 +0200] anonymous@example.com: Patrick Fjällborg har svarat i forumet...
+  [Fri, 09 Oct 2026 07:10:03 +0000] anonymous@example.com: Höstens hetaste sneakerfavoriter till grymma priser 🔥
+  [Wed, 07 Oct 2026 06:31:20 +0000] anonymous@example.com: Paketpris på tekniklösningar
+  [Fri, 02 Oct 2026 12:36:59 +0000] anonymous@example.com: Vinn VIP-biljetter till derbyt mot Djurgården!
+  [Sun, 11 Oct 2026 07:10:24 +0000] anonymous@example.com: Grymma deals väntar i vår Outlet 🔥
+  [Sat, 03 Oct 2026 05:18:45 -0600] anonymous@example.com: Säkra nyheter från Telia
+  [Thu, 08 Oct 2026 17:02:54 +0100] anonymous@example.com: 72% Use AI in Doc Workflows. Only 30% Are Ready.
+  [Sat, 03 Oct 2026 04:45:14 +0000] anonymous@example.com: Kallelse Morgonträning U11 - U15: Morgonträning 2026-10-08 06:45 för Matej Smerak
+  [Fri, 02 Oct 2026 17:09:41 +0100] anonymous@example.com: Are Salesforce Careers Safe If the AI Bubble Bursts? 🔴 Introducing Red Team Agent
+  [Sun, 04 Oct 2026 18:09:33 +0000] anonymous@example.com: Domare 11/10
+  [Mon, 05 Oct 2026 05:15:33 +0000] anonymous@example.com: Passa på – 20% på ALLA mattor!
+  [Tue, 06 Oct 2026 20:52:37 +0000] anonymous@example.com: marek.smerak, we’ve just added a comedy special you might like
+  [Sat, 03 Oct 2026 18:37:54 +0000] anonymous@example.com: Shantanu Bordoloi commented on Magnus Nyberg’s post: Congratulations Magnus! 🎉
+  [Wed, 07 Oct 2026 18:04:58 +0000] anonymous@example.com: View Carmen Antinucci’s post and your next steps
+  [Sat, 10 Oct 2026 08:56:45 +0000] anonymous@example.com: Kallelse Team 13 U14: Fys 2026-10-15 17:30 för Matej Smerak
+  [Thu, 08 Oct 2026 13:32:44 +0000] anonymous@example.com: Solna - Kista: Sekretariatet
+  [Mon, 05 Oct 2026 07:08:39 +0000] anonymous@example.com: Ut på nya äventyr? 🌄
+  [Mon, 12 Oct 2026 06:38:18 +0000] anonymous@example.com: Endast 319:- för Weightcase-setet🔥
+  [Mon, 05 Oct 2026 12:07:20 +0000] anonymous@example.com: Missa inte: Kampanj på Mammotion 🤖
+  [Mon, 05 Oct 2026 20:49:08 +0000] anonymous@example.com: Vineet Chhabra - Principal CRM Architect and Solution Advisor reacted to this post: Enjoyed Spirit of Wipro Run…
+  [Wed, 07 Oct 2026 09:53:02 +0200] anonymous@example.com: Äntligen – våra medlemssidor hos Stadium är öppna!
+  [Mon, 12 Oct 2026 06:30:53 +0000] anonymous@example.com: Pålitligt wifi, enkelt att sätta upp
+  [Wed, 07 Oct 2026 09:28:38 +0000] anonymous@example.com: Co kdyby byl e-mail rovnou zadáním pro AI?
+  [Mon, 05 Oct 2026 16:32:54 +0000] anonymous@example.com: Our spirits sale is here!
+  [Sat, 10 Oct 2026 07:36:44 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Thu, 08 Oct 2026 19:38:38 +0000] anonymous@example.com: Play longer licks and find your way back to the groove.
+  [Mon, 05 Oct 2026 08:04:54 +0000] anonymous@example.com: Doina Popa and Olena Semynog want to join your network
+  [Sun, 11 Oct 2026 10:59:50 +0000] anonymous@example.com: Kallelse Team 14 U13: Träning 2026-10-11 16:30 för Matej Smerak
+  [Sat, 03 Oct 2026 08:27:39 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
+  [Wed, 07 Oct 2026 13:08:50 +0000] anonymous@example.com: Viktig information om personuppgiftsbehandling
+  [Fri, 09 Oct 2026 10:06:25 +0000] anonymous@example.com: 20% rabatt på Fat Pipe 🔥
+  [Thu, 08 Oct 2026 07:30:38 +0000] anonymous@example.com: En smygtitt på julens nyheter
+  [Sun, 04 Oct 2026 18:37:54 +0000] anonymous@example.com: You appeared in 11 searches this week
+
+Deleting 170 messages...
+  moved to trash 10/170
+    ... 15 more progress lines ...
+  moved to trash 170/170
+Purging 170 messages from Trash...
+Permanently deleted 170 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 108 events to index.html
+No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-10-25 10:22:02</h2>
     <div class="task">
@@ -88,6 +344,19 @@
         <pre>[stdout]
 Wrote 108 events to index.html
 No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge bad">ERROR</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 30 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
+Command &#x27;[&#x27;git&#x27;, &#x27;push&#x27;, &#x27;origin&#x27;, &#x27;main&#x27;]&#x27; timed out after 120 seconds</pre>
       </details>
     </div>
   </section>
@@ -2534,46 +2803,6 @@ TimeoutError: [Errno 60] Operation timed out</pre>
         <summary>output</summary>
         <pre>build: OK
 ignored 2 run(s) older than 30 days
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
-push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-09-26 10:05:01</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge skip">SKIPPED (not scheduled today)</span>
-      </div>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge skip">SKIPPED (not scheduled today)</span>
-      </div>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 93 events to index.html
-No meaningful changes to index.html, nothing to commit.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-ignored 1 run(s) older than 30 days
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
 push: OK</pre>
       </details>
