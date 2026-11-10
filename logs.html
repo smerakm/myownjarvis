@@ -63,7 +63,38 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-11-09 09:13 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-11-10 09:05 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-11-10 10:05:06</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge skip">SKIPPED (not scheduled today)</span>
+      </div>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge skip">SKIPPED (not scheduled today)</span>
+      </div>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 108 events to index.html
+[main 6a64c72] update 2026-11-10
+ 1 file changed, 50 insertions(+), 73 deletions(-)
+[stderr]
+To https://github.com/smerakm/aikp12calendar.git
+   eb11dd3..6a64c72  main -&gt; main</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-11-09 10:05:04</h2>
     <div class="task">
@@ -205,6 +236,19 @@ Wrote 108 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    0c2e066..eb11dd3  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 44 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (31 run(s), 123 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
@@ -2795,46 +2839,6 @@ No meaningful changes to index.html, nothing to commit.</pre>
 ignored 16 run(s) older than 30 days
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
 Command &#x27;[&#x27;git&#x27;, &#x27;push&#x27;, &#x27;origin&#x27;, &#x27;main&#x27;]&#x27; timed out after 120 seconds</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-10-10 10:20:00</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge skip">SKIPPED (not scheduled today)</span>
-      </div>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge skip">SKIPPED (not scheduled today)</span>
-      </div>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 108 events to index.html
-No meaningful changes to index.html, nothing to commit.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-ignored 15 run(s) older than 30 days
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
-push: OK</pre>
       </details>
     </div>
   </section>
