@@ -63,7 +63,153 @@
   <main>
     <a class="back" href="index.html">&larr; Jarvis</a>
     <h1>Logs</h1>
-    <p class="built">Rebuilt 2026-11-26 09:05 UTC &middot; source: logs &middot; last 30 days</p>
+    <p class="built">Rebuilt 2026-11-27 09:11 UTC &middot; source: logs &middot; last 30 days</p>
+  <section class="run">
+    <h2>2026-11-27 10:05:05</h2>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - main</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 189 unread, 242 from the last 9 days (346 unique candidates). Fetching headers...
+  fetched 10/346
+    ... 33 more progress lines ...
+  fetched 346/346
+327 messages to render. Fetching full content...
+  fetched 10/327
+    ... 31 more progress lines ...
+  fetched 327/327
+Categorizing 327 messages...
+Labeling and marking as read 182 messages...
+  processed 10/182
+    ... 17 more progress lines ...
+  processed 182/182
+Applied labels to 182/182, marked 182/182 as read.
+Rendering HTML page...
+Wrote 327 categorized messages to output/index.html
+Summarizing categories with Claude...
+  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
+  [1/9] Private / Personal (133 messages)...
+    retry 1/3 in 2.6s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.7s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.3s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Private / Personal: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [2/9] Account &amp; Security (11 messages)...
+    retry 1/3 in 2.1s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.6s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.1s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Account &amp; Security: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [3/9] Orders &amp; Shipping (1 messages)...
+    retry 1/3 in 2.7s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.2s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.5s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Orders &amp; Shipping: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [4/9] Finance (8 messages)...
+    retry 1/3 in 2.4s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.2s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.6s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Finance: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [5/9] Family / Kids monitoring (3 messages)...
+    retry 1/3 in 2.1s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.4s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.0s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Family / Kids monitoring: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [6/9] Social (19 messages)...
+    retry 1/3 in 2.8s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.5s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.5s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Social: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [7/9] Sport notifications (19 messages)...
+    retry 1/3 in 2.6s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.7s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 8.5s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Sport notifications: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [8/9] Offers (90 messages)...
+    retry 1/3 in 2.7s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.6s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 9.0s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Offers: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+  [9/9] Newsletter (43 messages)...
+    retry 1/3 in 2.5s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 2/3 in 4.9s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    retry 3/3 in 9.0s (claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs)
+    warning: could not summarize Newsletter: claude CLI call failed after 4 attempts: claude CLI failed: Failed to authenticate: this login reached its time limit and cannot be renewed. Run `claude auth login` to sign in again, or use `claude setup-token` and set CLAUDE_CODE_OAUTH_TOKEN for unattended jobs
+No sections were summarized — skipping the brief page.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Email Crawl - purge</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Connecting to Gmail via IMAP...
+Found 33 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
+Fetching headers for review...
+  fetched 10/33
+    ... 2 more progress lines ...
+  fetched 33/33
+  [Wed, 11 Nov 2026 20:34:05 +0000] anonymous@example.com: Morgonträningen inställd
+  [Fri, 13 Nov 2026 08:16:06 +0000] anonymous@example.com: Fynda julklappar under BLACK WEEKS
+  [Wed, 11 Nov 2026 13:49:39 +0000] anonymous@example.com: Your Anthrion coworkers solved today’s brain break. Will you? 🎯
+  [Wed, 11 Nov 2026 20:27:40 +0000] anonymous@example.com: Lars Böttcher - Co-Founder and Group General Counsel reacted to this post: &quot;Do or do not. There is no…
+  [Thu, 12 Nov 2026 18:05:48 +0000] anonymous@example.com: Go wild for The Hunting Wives
+  [Thu, 12 Nov 2026 08:00:59 +0000] anonymous@example.com: Domare 15/11 &amp; 22/11
+  [Thu, 12 Nov 2026 10:45:18 +0000] anonymous@example.com: Handla nu – få upp till 400 kr i december 🎁
+  [Thu, 12 Nov 2026 06:30:42 +0000] anonymous@example.com: Årets bästa julklappstips 🎁
+  [Wed, 11 Nov 2026 18:11:08 +0000] anonymous@example.com: Månadens Erbjudande - Husqvarna Häcksax
+  [Thu, 12 Nov 2026 09:38:05 +0000] anonymous@example.com: Create Faster, AI-Powered Salesforce Document Workflows
+  [Thu, 12 Nov 2026 17:05:43 +0000] anonymous@example.com: Stop Change Set Deployments from Ruining Your Week
+  [Thu, 12 Nov 2026 18:43:23 +0000] anonymous@example.com: You have 5 new invitations
+  [Thu, 12 Nov 2026 05:36:07 +0000] anonymous@example.com: 🍷 Dobré víno, skvělý dárek. Vyberte ho už teď.
+  [Thu, 12 Nov 2026 09:01:33 -0600] anonymous@example.com: [XDQNGP] Säkra din favoritplats på flyget
+  [Wed, 11 Nov 2026 18:33:15 +0000] anonymous@example.com: Tonåring krockade med elsparkcykel – förälder misstänkt för brott
+  [Fri, 13 Nov 2026 08:15:39 +0000] anonymous@example.com: Domare 15/11 &amp; 22/11
+  [Fri, 13 Nov 2026 08:06:21 +0000] anonymous@example.com: ❄️ Redo för snön?
+  [Wed, 11 Nov 2026 17:52:00 +0000] anonymous@example.com: Is the Salesforce Job Market *Finally* Recovering? | Get Ready for Spring &#x27;27
+  [Thu, 12 Nov 2026 14:15:09 +0100] anonymous@example.com: Sista chansen: Anthropic inför börsnotering – stänger tisdag
+  [Thu, 12 Nov 2026 10:09:45 +0000] anonymous@example.com: The chance to win a 3 month membership to Signature Travel Club
+  [Wed, 11 Nov 2026 15:18:49 +0000] anonymous@example.com: New arrivals on Disney+
+  [Thu, 12 Nov 2026 00:05:24 +0000] anonymous@example.com: AAAAAH!!! BLACK WEEKS!!!
+  [Thu, 12 Nov 2026 06:15:07 +0000] anonymous@example.com: Två NAKED. Ett pris.
+  [Fri, 13 Nov 2026 06:23:08 +0000] anonymous@example.com: Gården med underjordisk passage
+  [Thu, 12 Nov 2026 20:16:58 +0000] anonymous@example.com: This week on AI kruh: November 5 - November 12, 2026
+  [Thu, 12 Nov 2026 17:38:07 +0100] anonymous@example.com: ⚓ Boka vinterns höjdpunkter – julbord &amp; nyår till sjöss
+  [Wed, 11 Nov 2026 14:25:04 +0000] anonymous@example.com: Upp till 67% rabatt på Robotgräsklippare! 🤖
+  [Wed, 11 Nov 2026 18:43:28 +0000] anonymous@example.com: You have 5 new invitations
+  [Thu, 12 Nov 2026 13:06:26 +0000] anonymous@example.com: Upp till 25 % rabatt på hyrbil 🚗
+  [Thu, 12 Nov 2026 11:59:10 +0000] anonymous@example.com: Try Postman&#x27;s paid features in Postman, free for 7 days
+  [Thu, 12 Nov 2026 14:58:19 +0100] anonymous@example.com: Hjälp oss kartlägga svensk ishockey– svara på vår spelarenkät
+  [Thu, 12 Nov 2026 10:02:23 -0600] anonymous@example.com: Fler spontana äventyr 2027? Ja tack! 🚐
+  [Thu, 12 Nov 2026 07:51:28 +0000] anonymous@example.com: A-laget vs Mälarö - fredag 13/11 19:30
+
+Deleting 33 messages...
+  moved to trash 10/33
+    ... 2 more progress lines ...
+  moved to trash 33/33
+Purging 33 messages from Trash...
+Permanently deleted 33 messages.</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>AIK Calendar - update</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>[stdout]
+Wrote 108 events to index.html
+No meaningful changes to index.html, nothing to commit.</pre>
+      </details>
+    </div>
+  </section>
   <section class="run">
     <h2>2026-11-26 10:05:04</h2>
     <div class="task">
@@ -92,6 +238,19 @@ Wrote 108 events to index.html
 [stderr]
 To https://github.com/smerakm/aikp12calendar.git
    eb1da30..b60b0e1  main -&gt; main</pre>
+      </details>
+    </div>
+    <div class="task">
+      <div class="task-head">
+        <span>Publish logs page</span>
+        <span class="badge ok">OK</span>
+      </div>
+      <details>
+        <summary>output</summary>
+        <pre>build: OK
+ignored 62 run(s) older than 30 days
+wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
+push: OK</pre>
       </details>
     </div>
   </section>
@@ -2527,133 +2686,6 @@ No meaningful changes to index.html, nothing to commit.</pre>
         <summary>output</summary>
         <pre>build: OK
 ignored 34 run(s) older than 30 days
-wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
-push: OK</pre>
-      </details>
-    </div>
-  </section>
-  <section class="run">
-    <h2>2026-10-28 10:05:02</h2>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - main</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 92 unread, 206 from the last 9 days (248 unique candidates). Fetching headers...
-  fetched 10/248
-    ... 23 more progress lines ...
-  fetched 248/248
-231 messages to render. Fetching full content...
-  fetched 10/231
-    ... 22 more progress lines ...
-  fetched 231/231
-Categorizing 231 messages...
-Labeling and marking as read 168 messages...
-  processed 10/168
-    ... 15 more progress lines ...
-  processed 168/168
-Applied labels to 168/168, marked 168/168 as read.
-Rendering HTML page...
-Wrote 231 categorized messages to output/index.html
-Summarizing categories with Claude...
-  using the claude CLI (/Users/marek/.local/bin/claude) — no API credits spent
-  [1/8] Private / Personal (55 messages)...
-    ok — 8 highlights (62501 in / 1754 out, 0 cached)
-  [2/8] Account &amp; Security (8 messages)...
-    ok — 6 highlights (10488 in / 1631 out, 1032 cached)
-  [3/8] Finance (10 messages)...
-    ok — 7 highlights (6807 in / 1317 out, 1032 cached)
-  [4/8] Family / Kids monitoring (5 messages)...
-    ok — 2 highlights (7162 in / 728 out, 1032 cached)
-  [5/8] Social (23 messages)...
-    ok — 7 highlights (71505 in / 3959 out, 1032 cached)
-  [6/8] Sport notifications (28 messages)...
-    ok — 8 highlights (28342 in / 1901 out, 1032 cached)
-  [7/8] Offers (54 messages)...
-    ok — 8 highlights (98488 in / 4268 out, 1032 cached)
-  [8/8] Newsletter (48 messages)...
-    ok — 8 highlights (114335 in / 4038 out, 1032 cached)
-Wrote 8 summarized sections to output/enhancedSummary.html</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Email Crawl - purge</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Connecting to Gmail via IMAP...
-Found 30 messages matching: (label:newsletter OR label:newsletters OR label:social OR label:offers OR label:sport-notifications) is:read older_than:14d
-Fetching headers for review...
-  fetched 10/30
-  fetched 20/30
-  fetched 30/30
-  [Tue, 13 Oct 2026 02:30:55 -0600] anonymous@example.com: Sista dagen – Medelhavet och USA från 549:-
-  [Mon, 12 Oct 2026 12:00:40 +0000] anonymous@example.com: Vuxenpoängen kan vänta :)
-  [Mon, 12 Oct 2026 10:31:40 +0000] anonymous@example.com: Nyhet: EVOLAB Platinum EDT 🔥
-  [Tue, 13 Oct 2026 03:06:31 -0700] anonymous@example.com: Tillgängliga nu: helt nya Surface Laptop och Surface Pro
-  [Tue, 13 Oct 2026 15:14:00 +0200] anonymous@example.com: Nytt avtal med Resport, 1996-klubben och höstlovscamp
-  [Tue, 13 Oct 2026 14:37:07 +0200] anonymous@example.com: Påminnelse att anmäla sig till Välkommen på ledarträff
-  [Tue, 13 Oct 2026 13:35:08 +0000] anonymous@example.com: Ett klipp du inte vill missa.. 👀
-  [Tue, 13 Oct 2026 13:19:13 +0000] anonymous@example.com: Fyra dagar kvar till klassikermötet
-  [Mon, 12 Oct 2026 17:16:08 +0100] anonymous@example.com: Trump Order Sparks Salesforce AI Rebrand 🚨 Why Isn&#x27;t Agentforce Demand Growing? 
-  [Tue, 13 Oct 2026 07:33:48 +0200] anonymous@example.com: 1 ny bostad i din bevakning på Booli 🎉
-  [Tue, 13 Oct 2026 17:25:45 +0000] anonymous@example.com: Nu kommer Apple TV 4K och HomePod mini 2!
-  [Tue, 13 Oct 2026 15:36:30 +0200] anonymous@example.com: Var med och påverka – svara på vår landslagsenkät
-  [Wed, 14 Oct 2026 06:46:03 +0000] anonymous@example.com: Månadens medlemspriser är här
-  [Mon, 12 Oct 2026 19:09:39 +0000] anonymous@example.com: You have 1 new invitation
-  [Tue, 13 Oct 2026 18:00:46 +0000] anonymous@example.com: Kallelse Motionslag Herr-Syd: Innebandy 2026-10-18 20:00 för Marek Smerak
-  [Tue, 13 Oct 2026 00:09:01 -0600] anonymous@example.com: Sista dagen – Medelhavet och USA från 549:-
-  [Wed, 14 Oct 2026 07:06:57 +0000] anonymous@example.com: Imorgon öppnar XXL x Stormberg Pop Up Shop❗
-  [Mon, 12 Oct 2026 12:12:59 +0000] anonymous@example.com: Sista chansen: Flyg från 349:-
-  [Tue, 13 Oct 2026 12:00:01 +0000] anonymous@example.com: 20-50% rabatt på alla innebandyskor 👟
-  [Mon, 12 Oct 2026 17:33:04 +0000] anonymous@example.com: Gå på bio för 30 spänn i 3 dagar
-  [Tue, 13 Oct 2026 11:44:17 +0100] anonymous@example.com: A Faster Way to Find Useful Salesforce Apps
-  [Wed, 14 Oct 2026 07:14:27 +0000] anonymous@example.com: SUPERSPENN är tillbaka 🎉
-  [Tue, 13 Oct 2026 12:08:47 +0200] anonymous@example.com: 👻 Win a 3D Printer in Our Halloween Ghost Hunt
-  [Tue, 13 Oct 2026 10:26:33 +0000] anonymous@example.com: Five ways to build efficiently with Claude
-  [Mon, 12 Oct 2026 20:31:03 +0000] anonymous@example.com: Ulf Daneklev - Enterprise Architect reacted to this post: &quot;Skulle du bli konsult? Vem…
-  [Tue, 13 Oct 2026 08:03:33 +0000] anonymous@example.com: SuperSpenn Tuesday and Wednesday!
-  [Tue, 13 Oct 2026 13:21:47 +0000] anonymous@example.com: Uppföljning: Vilken historisk hemkomst – nu laddar vi om för fredag 16/10! 🧡🖤
-  [Mon, 12 Oct 2026 10:03:27 -0600] anonymous@example.com: Höstpaus? Boka 3, betala för 2! 🍂
-  [Tue, 13 Oct 2026 06:21:03 +0000] anonymous@example.com: Drömmen om en skånelänga
-  [Mon, 12 Oct 2026 10:04:57 +0000] anonymous@example.com: 34 people viewed your profile
-
-Deleting 30 messages...
-  moved to trash 10/30
-  moved to trash 20/30
-  moved to trash 30/30
-Purging 30 messages from Trash...
-Permanently deleted 30 messages.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>AIK Calendar - update</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>[stdout]
-Wrote 108 events to index.html
-No meaningful changes to index.html, nothing to commit.</pre>
-      </details>
-    </div>
-    <div class="task">
-      <div class="task-head">
-        <span>Publish logs page</span>
-        <span class="badge ok">OK</span>
-      </div>
-      <details>
-        <summary>output</summary>
-        <pre>build: OK
-ignored 33 run(s) older than 30 days
 wrote /Users/marek/LABS/01-projects/JarvisPages/logs.html (30 run(s), 119 task(s))
 push: OK</pre>
       </details>
